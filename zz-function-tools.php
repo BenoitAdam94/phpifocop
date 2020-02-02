@@ -40,3 +40,6 @@ function info($js) {
 js('test');
 
 info('info');
+?>
+<hr>
+Totototototototo
