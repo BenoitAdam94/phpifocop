@@ -25,10 +25,10 @@
 
                 <h1>Formulaire 2</h1>
                 <label for="pseudo">Pseudo</label>
-                <input ype="text" name ="pseudo" id="pseudo">
+                <input type="text" name ="pseudo" id="pseudo">
                 <br>
                 <label for="email">Email</label>
-                <input ype="text" name ="email" id="email">
+                <input type="text" name ="email" id="email">
                 <hr>
                 <input type="submit" id="confirm" value="Confirmer">
             </form>
