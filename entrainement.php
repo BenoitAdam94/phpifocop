@@ -7,6 +7,10 @@ h2 { padding:20px; background-color:#333; color: white; }
 <h2>Ecriture & Affichage</h2>
 
 <?php 
+
+$debug = 0;
+include 'zz-function-tools.php';
+
 // commentaire
 /* commentaire
 multi-lignes */
@@ -581,7 +585,49 @@ $utilisateur['email'] = 'mail@mail.fr';
     echo '<pre>'; var_dump($utilisateur); echo '</pre>';
 
 
+echo '<h2>Tableaux multidimensionnel</h2>';
 
+$tab_multi = array (
+                0 => array('prenom' => 'Marie', 'mail' => 'marie@mail.fr', 'age' => 32),
+                1 => array('prenom' => 'Piers', 'mail' => 'piers@mail.fr', 'age' => 21),
+                2 => array('prenom' => 'Frank', 'mail' => 'frank@mail.fr', 'age' => 40),
+                    );
+
+
+dump($tab_multi);
+js("Je suis un log");
+
+// on affiche toutes les infomations avec 2 foreach
+
+echo '<ul>';
+foreach($tab_multi AS $indice => $valeur) {
+    echo '<li>' . $indice . '</li>';
+
+    foreach($valeur AS $indice2 => $valeur2) {
+        echo '<li>' . $indice2 . ' : ' . $valeur2 . '</li>';
+    }
+}
+echo '</ul>';
+
+// sans les balises ul li
+foreach($tab_multi AS $indice => $valeur) {
+    foreach($valeur AS $indice2 => $valeur2) {
+        echo "- $indice2 : $valeur2 <br>";
+    }
+}
+
+// Avec FOR
+$taille_tab_multi = count($tab_multi);
+for($i = 0; $i < $taille_tab_multi; $i++) {
+    echo "$tab_multi[$i]['prenom'] <br>"
+}
+
+
+echo '<h2>Les classes et les objets</h2>'
+
+// Une classe est un modèle de construction
+// Un objet est issu d'une classe (c'est une instance de la classe)
+// Un objet est un conteneur virtuel permeetant de conserver un ensemble d'informations (appellées propriété ou atrribut de l'objet) mais aussi des fonctions (appellées méthode de l'objet)
 
 ?>
 
