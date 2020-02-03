@@ -1,8 +1,8 @@
 <?php
 
-function dump($ddump) {
+function dump($dump) {
     echo '<pre>';
-    var_dump($ddump);
+    var_dump($dump);
     echo '</pre>';
 }
 
@@ -23,20 +23,3 @@ function info($js) {
 }
 
 ?>
-
-$liste = array('jaune', 'rouge', 'bleu', 'vert');
-
-$couleur = "bleu";
-
-
-dump($liste);
-
-sep();
-
-
-js('test');
-
-info('info');
-?>
-<hr>
-Totototototototo
