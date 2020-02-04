@@ -610,11 +610,104 @@ echo '<pre>'; var_dump($utilisateur); echo '</pre>';
 // ksort($utilisateur); // pour réordonner le tableau dans l'ordre alphabétique ou numérique
 // echo '<pre>'; var_dump($utilisateur); echo '</pre>';
 
+echo '<h2>Tableaux multidimensionnel </h2>';
+// un tableau array contenant un ou plusieurs tableaux array
+
+$tab_multi = array(0 => array('prenom' => 'Marie', 'mail' => 'marie@mail.fr', 'age' => 32), 1 => array('prenom' => 'Pierre', 'mail' => 'pierre@mail.fr', 'age' => 21), 2 => array('prenom' => 'Franck', 'mail' => 'franck@mail.fr', 'age' => 40));
+
+$tab_multi = array(
+					0 => array(
+						'prenom' => 'Marie', 
+						'mail' => 'marie@mail.fr',
+						'age' => 32),
+					1 => array(
+						'prenom' => 'Pierre', 
+						'mail' => 'pierre@mail.fr', 
+						'age' => 21), 
+					2 => array(
+						'prenom' => 'Franck', 
+						'mail' => 'franck@mail.fr', 
+						'age' => 40)
+					);
 
 
 
+echo '<pre>'; print_r($tab_multi); echo '</pre>';
+echo '<pre>'; var_dump($tab_multi); echo '</pre>';
 
+// on affiche toutes les informations avec 2 foreach()
+echo '<ul>';
+foreach($tab_multi AS $indice => $valeur) {
+	echo '<li>' . $indice . '<ul>';	
+	foreach($valeur AS $indice2 => $valeur2) {
+		echo '<li>' . $indice2 . ' : ' . $valeur2 . '</li>';
+	}	
+	echo '</ul></li>';
+}
+echo '</ul>';
+// sans les balises ul li
+foreach($tab_multi AS $indice => $valeur) {
+	foreach($valeur AS $indice2 => $valeur2) {
+		echo '- ' . $indice2 . ' : ' . $valeur2 . '<br>';
+	}	
+}
 
+separateur();
+// pour affiche rune information d'un sous tableau :
+echo $tab_multi[1]['mail'] . '<br>';
+separateur();
+// pour afficher uniquement les prénoms des sous tableaux avec une boucle for()
+$taille_tab_multi = count($tab_multi);
+for($i = 0; $i < $taille_tab_multi; $i++) {
+	echo $tab_multi[$i]['prenom'] . '<br>';
+}
+	
+echo '<h2>Les classes et objets</h2>';
+// Une classe est un modèle de construction
+// Un objet est issu d'une classe (c'est une instance de la classe)
+// Un objet est un conteneur virtuel permettant de conserver un ensemble d'informations (appelées propriété ou attribut de l'objet) mais aussi des fonctions (appelées methode de l'objet)
+
+// pour déclarer une classe
+class Etudiant
+{
+	// propriétés
+	public $prenom = 'Marie';
+	public $mail = 'marie@mail.fr';
+	public $age = 32;
+	
+	// le mot clé public permet de préciser que l'on peut appeler l'information directement sur l'objet généré sinon il faudrait passer par des methodes (fonctions) prévues pour modifier ou récupérer l'information 
+	// il existe d'autres possibilités notamment protected / private
+	
+	// methode
+	public function pays() {
+		return 'France';
+	}
+}
+
+// pour instancier un objet depuis la classe :
+$objet1 = new Etudiant();
+$objet2 = new Etudiant();
+echo '<pre>'; var_dump($objet1); echo '</pre>';
+echo '<pre>'; var_dump($objet2); echo '</pre>';
+
+// pour voir les methodes d'un objet
+echo '<pre>'; var_dump(get_class_methods($objet1)); echo '</pre>';
+// get_class_methods() permet de voir les methodes d'un objet
+
+// pour récupérer une information ou une methode d'un objet
+echo $objet1->prenom . '<br>';
+echo $objet1->mail . '<br>';
+echo $objet1->age . '<hr>';
+// la methode
+echo $objet1->pays() . '<hr>';
+
+// il est possible de modifier les propriétés : 
+$objet1->age = 33;
+echo $objet1->age . '<hr>';
+echo $objet2->age . '<hr>';
+
+// dans un tableau array on appelle une information avec les crochets []
+// dans un objet avec la fleche ->
 
 
 

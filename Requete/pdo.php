@@ -44,4 +44,42 @@ $resultat = $pdo -> query("SELECT * FROM employes WHERE id_employes = 350");
 dump($resultat);
 dump(get_class_methods($resultat));
 
+$employe = $resultat->fetch(PDO::FETCH_OBJ);
+dump($employe);
+
+// echo $employe2['prenom'] . '<br>'; // avec FETCH_ASSOC
+// dump($employe2);
+
+// echo $employe[1] . '<br>'; // avec FETCH_NUM
+
+echo $employe->prenom . '<br>'; // avec FETCH_OBJ
+
+echo '<h2>04 - PDO : query() pour plusieurs lignes de résultat</h2>';
+
+//On récupérer les lignes de la table employé
+
+$resultat = $pdo -> query("SELECT * FROM employes");
+
+echo 'Il y a ' . $resultat -> rowCount() . ' employes dans la table<br>';
+// $resultat
+
+while($ligne = $resultat -> fetch(PDO::FETCH_ASSOC)) {
+    
+    echo'<div style="display: inline-block; margin: 1%; width:22%; box-sizing: border-box; padding: 10px; color:white; background-color: steelblue; overflow: hidden;">';
+/*
+    echo 'Id employé : ' . $ligne['id_employes'] . '<br>';
+    echo 'Prenom : ' . $ligne['prenom'] . '<br>';
+    echo 'Nom : ' . $ligne['nom'] . '<br>';
+    echo 'Sexe : ' . $ligne['sexe'] . '<br>';
+    echo 'Service : ' . $ligne['service'] . '<br>';
+    echo 'Salaire : ' . $ligne['salaire'] . '<br>';
+    echo 'Date Embauche: ' . $ligne['date_embauche'] . '<br>';
+*/
+
+
+    foreach($ligne AS $indice => $valeur) {
+        echo'<b>' . ucfirst($indice) . '</b> : ' . $valeur . '<br>';
+    }
+    echo '</div>';
+}
 ?>
