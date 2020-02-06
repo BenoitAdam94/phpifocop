@@ -18,6 +18,31 @@ $prix = "";
 $stock = "";
 $description = "";
 
+if (
+  isset($_POST['reference']) &&
+  isset($_POST['titre']) &&
+  isset($_POST['categorie']) &&
+  isset($_POST['couleur']) &&
+  isset($_POST['taille']) &&
+  isset($_POST['sexe']) &&
+  isset($_POST['prix']) &&
+  isset($_POST['stock']) &&
+  isset($_POST['description'])
+) {
+
+  $reference = trim($_POST['reference']);
+  $titre = trim($_POST['titre']);
+  $categorie = trim($_POST['categorie']);
+  $couleur = trim($_POST['couleur']);
+  $taille = trim($_POST['taille']);
+  $sexe = trim($_POST['sexe']);
+  $photo_bdd = trim($_POST['photo_bdd']);
+  $prix = trim($_POST['prix']);
+  $stock = trim($_POST['stock']);
+  $description = trim($_POST['description']);
+}
+
+
 // Tools for debug
 include '../inc/tools.inc.php';
 // debug();
@@ -52,27 +77,57 @@ include '../inc/nav.inc.php';
           <div class="form-group">
             <label for="categorie">Catégorie</label>
             <select name="categorie" id="categorie" class="form-control">
-              <option <?php if($categorie == 'Chemise') { echo "selected"; } ?>>Chemise</option>
-              <option <?php if($categorie == 'T-shirt') { echo "selected"; } ?>>T-shirt</option>
-              <option <?php if($categorie == 'Pantalon') { echo "selected"; } ?>>Pantalon</option>
-              <option <?php if($categorie == 'Caleçon') { echo "selected"; } ?>>Caleçon</option>
-              <option <?php if($categorie == 'Echape') { echo "selected";} ?>>Echarpe</option>
-              <option <?php if($categorie == 'Chaussettes') { echo "selected";} ?>>Chaussettes</option>
-              <option <?php if($categorie == 'Polo') { echo "selected";} ?>>Polo</option>
+              <option <?php if ($categorie == 'Chemise') {
+                        echo "selected";
+                      } ?>>Chemise</option>
+              <option <?php if ($categorie == 'T-shirt') {
+                        echo "selected";
+                      } ?>>T-shirt</option>
+              <option <?php if ($categorie == 'Pantalon') {
+                        echo "selected";
+                      } ?>>Pantalon</option>
+              <option <?php if ($categorie == 'Caleçon') {
+                        echo "selected";
+                      } ?>>Caleçon</option>
+              <option <?php if ($categorie == 'Echape') {
+                        echo "selected";
+                      } ?>>Echarpe</option>
+              <option <?php if ($categorie == 'Chaussettes') {
+                        echo "selected";
+                      } ?>>Chaussettes</option>
+              <option <?php if ($categorie == 'Polo') {
+                        echo "selected";
+                      } ?>>Polo</option>
             </select>
           </div>
           <div class="form-group">
             <label for="couleur">Couleur</label>
             <select name="couleur" id="couleur" class="form-control">
               <option>Bleu</option>
-              <option <?php if($couleur == 'Blanc') { echo "selected";} ?>>Blanc</option>
-              <option <?php if($couleur == 'Vert') { echo "selected";} ?>>Vert</option>
-              <option <?php if($couleur == 'Rouge') { echo "selected";} ?>>Rouge</option>
-              <option <?php if($couleur == 'Gris') { echo "selected";} ?>>Gris</option>
-              <option <?php if($couleur == 'Rose') { echo "selected";} ?>>Rose</option>
-              <option <?php if($couleur == 'Beige') { echo "selected";} ?>>Beige</option>
-              <option <?php if($couleur == 'Marron') { echo "selected";} ?>>Marron</option>
-              <option <?php if($couleur == 'Jaune') { echo "selected";} ?>>Jaune</option>
+              <option <?php if ($couleur == 'Blanc') {
+                        echo "selected";
+                      } ?>>Blanc</option>
+              <option <?php if ($couleur == 'Vert') {
+                        echo "selected";
+                      } ?>>Vert</option>
+              <option <?php if ($couleur == 'Rouge') {
+                        echo "selected";
+                      } ?>>Rouge</option>
+              <option <?php if ($couleur == 'Gris') {
+                        echo "selected";
+                      } ?>>Gris</option>
+              <option <?php if ($couleur == 'Rose') {
+                        echo "selected";
+                      } ?>>Rose</option>
+              <option <?php if ($couleur == 'Beige') {
+                        echo "selected";
+                      } ?>>Beige</option>
+              <option <?php if ($couleur == 'Marron') {
+                        echo "selected";
+                      } ?>>Marron</option>
+              <option <?php if ($couleur == 'Jaune') {
+                        echo "selected";
+                      } ?>>Jaune</option>
             </select>
           </div>
         </div>
@@ -80,11 +135,21 @@ include '../inc/nav.inc.php';
           <div class="form-group">
             <label for="taille">Taille</label>
             <select name="taille" id="taille" class="form-control">
-              <option <?php if($taille == 'XS') { echo "selected";} ?>>XS</option>
-              <option> <?php if($taille == 'S') { echo "selected";} ?>S</option>
-              <option <?php if($taille == 'M') { echo "selected";} ?>>M</option>
-              <option <?php if($taille == 'L') { echo "selected";} ?>>L</option>
-              <option <?php if($taille == 'XL') { echo "selected";} ?>>XL</option>
+              <option <?php if ($taille == 'XS') {
+                        echo "selected";
+                      } ?>>XS</option>
+              <option> <?php if ($taille == 'S') {
+                          echo "selected";
+                        } ?>S</option>
+              <option <?php if ($taille == 'M') {
+                        echo "selected";
+                      } ?>>M</option>
+              <option <?php if ($taille == 'L') {
+                        echo "selected";
+                      } ?>>L</option>
+              <option <?php if ($taille == 'XL') {
+                        echo "selected";
+                      } ?>>XL</option>
             </select>
           </div>
           <div class="form-group">
