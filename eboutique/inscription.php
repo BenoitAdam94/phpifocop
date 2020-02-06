@@ -82,8 +82,25 @@ if(
         // si le nombre de ligne est supérieur à zéro, alors le pseudo est déjà utilisé.
         $msg .= '<div class="alert alert-danger mt-3">Pseudo Indisponible</div>';
       } else {
+        // cryptage
+          $mdp = password_hash($mdp, PASSWORD_DEFAULT);
 
-        $pdo->prepare(INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `sexe`, `ville`, `cp`, `adresse`, `statut`) VALUES (NULL, 'adam', '', '', '', '', 'm', '', '', '', ''))
+          $enregistrement = $pdo->prepare("INSERT INTO membre (id_membre, pseudo, mdp, nom, prenom, email, sexe, ville, cp, adresse, statut) VALUES (NULL, :pseudo, :mdp, :nom, :prenom, :email, :sexe, :ville, :cp, :adresse, 1)");
+          $enregistrement->bindParam(':pseudo',$pseudo, PDO::PARAM_STR);
+          $enregistrement->bindParam(':mdp',$mdp, PDO::PARAM_STR);
+          $enregistrement->bindParam(':nom',$nom, PDO::PARAM_STR);
+          $enregistrement->bindParam(':prenom',$prenom, PDO::PARAM_STR);
+          $enregistrement->bindParam(':email',$email, PDO::PARAM_STR);
+          $enregistrement->bindParam(':sexe',$sexe, PDO::PARAM_STR);
+          $enregistrement->bindParam(':ville',$ville, PDO::PARAM_STR);
+          $enregistrement->bindParam(':cp',$cp, PDO::PARAM_STR);
+          $enregistrement->bindParam(':adresse',$adresse, PDO::PARAM_STR);
+          $enregistrement->execute ();
+          
+
+
+/*
+        $pdo->prepare(INSERT INTO `membre` (`id_membre`, `pseudo`, `mdp`, `nom`, `prenom`, `email`, `sexe`, `ville`, `cp`, `adresse`, `statut`) VALUES (NULL, 'adam', '', '', '', '', 'm', '', '', '', ''))*/
 
       }
     }

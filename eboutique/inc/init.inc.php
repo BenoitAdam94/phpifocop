@@ -11,3 +11,8 @@ $options = array(
 $pdo = new PDO($host_db, $login, $password, $options);
 
 $msg = "";
+
+define('URL', 'http://elephpant/eboutique/');
+
+session_start();
+
