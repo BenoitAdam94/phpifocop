@@ -12,7 +12,12 @@ $pdo = new PDO($host_db, $login, $password, $options);
 
 $msg = "";
 
+// URL racine du projet
 define('URL', 'http://elephpant/eboutique/');
 
 session_start();
 
+//chemin racine serveur
+define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT']);
+
+define('SITE_ROOT', '/eboutique/');

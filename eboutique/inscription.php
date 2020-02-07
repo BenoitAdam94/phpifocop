@@ -17,6 +17,8 @@ $ville='';
 $cp='';
 $adresse='';
 
+
+
 //on controle l'existence des champs du formulaire
 if(
   isset($_POST['pseudo']) &&
