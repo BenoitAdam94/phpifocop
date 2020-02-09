@@ -5,6 +5,8 @@
 $_1year_in_seconds = 31536000;
 $_2year_in_seconds = 63072000;
 
+//dump
+
 function dump($dump) {
     echo '<pre>';
     var_dump($dump);
@@ -13,6 +15,10 @@ function dump($dump) {
 
 function sep() {
     echo '<hr>';
+}
+
+function separateur() {
+    echo '<hr><hr><hr>';
 }
 
 // Javascript Console for PHP

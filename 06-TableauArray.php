@@ -1,3 +1,6 @@
+<?php
+
+
 
 echo '<h2>Tableaux de données array</h2>';
 
@@ -34,7 +37,7 @@ $liste_pays[] = 'Espagne';
 $liste_pays[] = 'Italie';
 echo '<pre>'; var_dump($liste_pays); echo '</pre>';
 
-//afichage
+//affichage
 echo "$liste_pays[2] <br>";
 
 // modification

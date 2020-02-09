@@ -1,5 +1,8 @@
 <?php
 
+$debug = 0;
+include 'tools.php';
+
 echo '<h2>Mathematiques</h2>';
 
 $a = 10;

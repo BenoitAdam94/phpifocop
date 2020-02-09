@@ -235,6 +235,7 @@ for($i = 0; $i <10; $i++){
 <?php
 separateur();
 ?>
+
 <table style="border-collapse: collapse; width: 50%; margin: 0 auto;" border="1">
 
     <?php
