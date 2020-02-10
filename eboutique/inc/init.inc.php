@@ -1,6 +1,6 @@
 <?php
+// BDD
 
-// Connexion à la BDD
 $host_db = 'mysql:host=localhost;dbname=eboutique'; 
 $login = 'root'; 
 $password = ''; 
@@ -10,25 +10,14 @@ $options = array(
 				);				
 $pdo = new PDO($host_db, $login, $password, $options);
 
-// Création d'une variable destinée à afficher des messages utilisateur
 $msg = "";
 
-// ouverture d'une session
+// URL racine du projet
+define('URL', 'http://elephpant/eboutique/');
+
 session_start();
 
-// déclaration de constante
-// URL racine du projet
-define('URL', 'http://php/eboutique/'); // lien absolu racine du projet
-// Chemin racine du serveur
+//chemin racine serveur
 define('SERVER_ROOT', $_SERVER['DOCUMENT_ROOT']);
-// Chemin racine du dossier du site depuis le serveur
+
 define('SITE_ROOT', '/eboutique/');
-
-
-
-
-
-
-
-
-

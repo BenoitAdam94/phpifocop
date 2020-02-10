@@ -1,108 +1,110 @@
-<?php 
+<?php
 include 'inc/init.inc.php';
-include 'inc/fonction.inc.php';
+include 'inc/function.inc.php';
 
-// déconnexion
+// deconnection
 if(isset($_GET['action']) && $_GET['action'] == 'deconnexion') {
-	session_destroy(); // on détruit la session pour provoquer la déconnexion.
+  session_destroy();
 }
 
+// Tools for debug
+include 'inc/tools.inc.php';
+// debug();
 
-// si l'utilisateur est connecté, on le renvoie sur la page profil
-if(user_is_connect()) {
-	header('location:profil.php');
+if (user_is_connect()) {
+  header('location:profil.php');
 }
 
 $pseudo = '';
-// est ce que le formulaire a été validé
-if(isset($_POST['pseudo']) && isset($_POST['mdp'])) {
-	$pseudo = trim($_POST['pseudo']);
-	$mdp = trim($_POST['mdp']);
-	
-	// on récupère les informations en bdd de l'utilisateur sur la base du pseudo (unique en bdd)
-	$verif_connexion = $pdo->prepare("SELECT * FROM membre WHERE pseudo = :pseudo");
-	$verif_connexion->bindParam(":pseudo", $pseudo, PDO::PARAM_STR);
-	$verif_connexion->execute();
-	
-	if($verif_connexion->rowCount() > 0) {
-		// s'il y a une ligne dans $verif_connexion alors le pseudo est bon
-		$infos = $verif_connexion->fetch(PDO::FETCH_ASSOC);
-		// echo '<pre>'; var_dump($infos); echo '</pre>';
-		
-		// on compare le mot de passe qui a été crypté avec password_hash() via la fonction prédéfinie pasword_verify()
-		if(password_verify($mdp, $infos['mdp'])) {
-			// le pseudo et le mot de passe sont corrects, on enregistre les informations du membre dans la session 
-			
-			$_SESSION['membre'] = array();
-			
-			$_SESSION['membre']['id_membre'] = $infos['id_membre'];
-			$_SESSION['membre']['pseudo'] = $infos['pseudo'];
-			$_SESSION['membre']['nom'] = $infos['nom'];
-			$_SESSION['membre']['prenom'] = $infos['prenom'];
-			$_SESSION['membre']['sexe'] = $infos['sexe'];
-			$_SESSION['membre']['email'] = $infos['email'];
-			$_SESSION['membre']['ville'] = $infos['ville'];
-			$_SESSION['membre']['cp'] = $infos['cp'];
-			$_SESSION['membre']['adresse'] = $infos['adresse'];
-			$_SESSION['membre']['statut'] = $infos['statut'];
-			
-			// avec un foreach()
-			/*
-			foreach($infos AS $indice => $valeur) {
-				if($indice != 'mdp') {
-					$_SESSION['membre'][$indice] = $valeur;
-				}				
-			}*/
-			
-			// maintenant que l'utilisateur est connecté, on le redirige vers profil.php
-			header('location:profil.php');
-			// header('location:...) doit être exécuté AVANT le moindre affichage dans la page sinon => bug
-			
-			
-		} else {
-			$msg .= '<div class="alert alert-danger mt-3">Erreur sur le pseudo et / ou le mot de passe !</div>';	
-		}
-		
-	} else {
-		$msg .= '<div class="alert alert-danger mt-3">Erreur sur le pseudo et / ou le mot de passe !</div>';	
-	}
-	
+$mdp = '';
+
+
+//on controle l'existence des champs du formulaire
+if (
+  isset($_POST['pseudo']) &&
+  isset($_POST['mdp'])
+) {
+
+  $pseudo = trim($_POST['pseudo']);
+  $mdp    = trim($_POST['mdp']);
+
+  $verif_connexion = $pdo->prepare("SELECT * FROM membre WHERE pseudo = :pseudo");
+  $verif_connexion->bindParam(":pseudo", $pseudo, PDO::PARAM_STR);
+  $verif_connexion->execute();
+
+
+  if ($verif_connexion->rowCount() > 0) {
+    $infos = $verif_connexion->fetch(PDO::FETCH_ASSOC);
+
+    if (password_verify($mdp, $infos['mdp'])) {
+      // le pseudo et le mdp sont correct on enregistre les info du membre dans la session;
+
+
+      $_SESSION['membre'] = array();
+      $_SESSION['membre']['id_membre'] = $infos['id_membre'];
+      $_SESSION['membre']['pseudo'] = $infos['pseudo'];
+      $_SESSION['membre']['nom'] = $infos['nom'];
+      $_SESSION['membre']['prenom'] = $infos['prenom'];
+      $_SESSION['membre']['sexe'] = $infos['sexe'];
+      $_SESSION['membre']['email'] = $infos['email'];
+      $_SESSION['membre']['ville'] = $infos['ville'];
+      $_SESSION['membre']['cp'] = $infos['cp'];
+      $_SESSION['membre']['adresse'] = $infos['adresse'];
+      $_SESSION['membre']['statut'] = $infos['statut'];
+
+      /*
+              // avec un foreach()
+              foreach($infos AS $indice => $valeur) {
+                if($indice != 'mdp'){
+                  $_SESSION['membre'][$indice] = $valeur;
+                }
+              }*/
+
+      // maintenant que l'utilisateur est connecté on le redirige vers profil.php
+      header('location:profil.php');
+    } else {
+
+      $msg .= 'erreur mot de passe invalide';
+    }
+  } else {
+
+    $msg .= 'erreur pseudo invalide';
+  }
 }
-
-
-
 
 
 include 'inc/header.inc.php';
 include 'inc/nav.inc.php';
-echo '<pre>'; var_dump($_SESSION); echo '</pre>';
+// dump($_SESSION);
 ?>
 
-	<div class="starter-template">
-		<h1><i class="fas fa-ghost" style="color: #4c6ef5;"></i> Connexion <i class="fas fa-ghost" style="color: #4c6ef5;"></i></h1>
-		<p class="lead"><?php echo $msg; ?></p>
-	</div>
-
-	<div class="row">
-		<div class="col-4 mx-auto">
-		
-<form method="post" action="">
-	<div class="form-group">
-		<label for="pseudo">Pseudo</label>
-		<input type="text" name="pseudo" id="pseudo" value="<?php echo $pseudo; ?>" class="form-control">
-	</div>
-	<div class="form-group">
-		<label for="mdp">Mot de passe</label>
-		<input type="text" autocomplete="off" name="mdp" id="mdp" value="" class="form-control">
-	</div>
-	<div class="form-group">
-		<button type="submit" name="connexion" id="connexion" class="form-control btn btn-outline-success"> Connexion </button>
-	</div>
-</form>			
-			
-		</div>
-	</div>
 
 
-<?php 
+
+<div class="starter-template">
+  <h1><i class="fas fa-carrot" style="color: #4c6ef5;"></i> Connection <i class="fas fa-carrot" style="color: #4c6ef5;"></i></h1>
+  <p class="lead"><?php echo $msg; ?></p>
+</div>
+
+<div class="row">
+  <div class="col-12 mx-auto">
+    <!-- Pseudo -->
+    <form method="post">
+      <div class="form-group">
+        <label for="pseudo">Pseudo</label>
+        <input type="text" name="pseudo" id="pseudo" value="<?php echo "$pseudo"; ?>" class="form-control">
+      </div>
+      <!-- Mot de passe -->
+      <div class="form-group">
+        <label for="mdp">Mot de passe</label>
+        <input type="password" name="mdp" id="mdp" value="<?php echo "$mdp"; ?>" class="form-control">
+      </div>
+
+      <button type="submit" name="connection" id="connection" class="form-control btn btn-outline-primary">Connection</button>
+    </form>
+  </div>
+</div>
+
+<?php
 include 'inc/footer.inc.php';
+?>
