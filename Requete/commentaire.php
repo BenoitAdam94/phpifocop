@@ -46,7 +46,7 @@ if(isset($_POST['pseudo']) && isset($_POST['message'])) {
 	</head>
 	
 	<body>
-		<div class="conteneur">		
+		<div class="conteneur">
 			<form method="post" action="">			
 				<h1> Commentaire </h1>
 				
@@ -59,15 +59,10 @@ if(isset($_POST['pseudo']) && isset($_POST['message'])) {
 				<hr>
 				<input type="submit" id="confirm" value="Valider">
 			</form>
-			<hr>
 			<div id="affichage">
-			<?php 
-			$liste_message = $pdo->query("SELECT * FROM message ORDER BY date_enregistrement DESC");
-			
 			while($ligne = $liste_message->fetch(PDO::FETCH_ASSOC)) {
 				// var_dump($ligne);
 				echo 'Par : <b>' . htmlentities($ligne['pseudo'], ENT_QUOTES) . '</b> à ' . $ligne['date_enregistrement'] . '<br><br>';
-				echo '<p><b>Message : </b>' . htmlentities($ligne['message'], ENT_QUOTES) . '</p><hr>';
 			}
 			
 			echo '<hr><hr><hr><hr><hr>';
@@ -84,6 +79,7 @@ if(isset($_POST['pseudo']) && isset($_POST['message'])) {
 
 			?>
 			</div>
+			<?= ?>
 		</div>
 	</body>
 </html>
