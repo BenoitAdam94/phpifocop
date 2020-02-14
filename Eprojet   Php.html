@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="Eprojet%20%20%20Php_files/style.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Parce que le savoir est un devoir. Nous vous accompagnons dans votre progression sur le Web. Formez-vous à votre rythme.">
+		<meta name="keywords" content="Eprojet - Tutoriels - Mooc - Web - Développement">
+		<meta name="Robots" content="all">
+		<link rel="shortcut icon" href="https://www.eprojet.fr/cours/imgsite/favicon.ico">
+		<title>
+		Eprojet : Php		</title>
+		<script async="" src="Eprojet%20%20%20Php_files/analytics.js"></script><script type="text/javascript" src="Eprojet%20%20%20Php_files/js.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shCore.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shBrushJScript.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shBrushPhp.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shBrushXml.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shBrushCss.js"></script>
+		<script type="text/javascript" src="Eprojet%20%20%20Php_files/shBrushSql.js"></script>
+		<!-- <link type="text/css" rel="stylesheet" href="styles/shCoreDefault.css"/> -->
+		<link type="text/css" rel="Stylesheet" href="Eprojet%20%20%20Php_files/shCoreRDark.css">
+		<link href="Eprojet%20%20%20Php_files/css.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+		<style>	body .syntaxhighlighter .line {		white-space: pre-wrap !important; /* make code wrap */	} .syntaxhighlighter{ padding: 10px !important;  width: 97% !important;	}
+		</style>
+	</head>
+	<body>
+		<header>
+			
+		<nav class="haut-bas"> <!-- proposer barre de menu fixed!! -->
+				<div class="menuNormal">
+					<ul>
+						<li><a href="https://www.eprojet.fr/cours/index.php" class="home" title="eprojet.fr"><img src="Eprojet%20%20%20Php_files/logo2.png" width="40px"></a></li>				
+						<li><a href="https://www.eprojet.fr/cours/html_css/01-html_css-introduction-html-css" title="intégration Html / Css" class="lien1">Html / Css</a></li>
+						<li><a href="https://www.eprojet.fr/cours/responsive_design/01-responsive_design-le-responsive-design" title="intégration Responsive Design" class="lien2">Responsive Design</a></li>
+						<li><a href="https://www.eprojet.fr/cours/bootstrap/01-bootstrap-framework-bootstrap" title="intégration Bootstrap" class="lien3">Bootstrap</a></li>
+						<li><a href="https://www.eprojet.fr/cours/newsletter_emailing/01-newsletter_emailing-les-newsletter-emailing" title="intégration Newsletter" class="lien4">Newsletter</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/sql/01-sql-base-de-donnees" title="développement Sql" class="lien5">Sql</a></li>
+						<li><a href="https://www.eprojet.fr/cours/php/01-php-intro-php" title="développement Php" class="lien6 active">Php</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/wordpress/01-wordpress-installation-et-configuration-de-wordpress" title="cms Wordpress" class="lien7">Wordpress</a></li>
+						<li><a href="https://www.eprojet.fr/cours/drupal/01-drupal-installation-et-configuration" title="cms Drupal" class="lien8">Drupal</a></li>						
+						
+						<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/01-cahier_des_charges_devis-rediger-un-cahier-des-charges" title="Cahiers des charges" class="lien9">Cahier des Charges</a></li>
+						<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/02-cahier_des_charges_devis-etablir-un-devis" title="Devis et modele de devis" class="lien10">Devis</a></li>
+						<li><a href="https://www.eprojet.fr/cours/wamp/01-wamp-configuration-de-wamp" title="Wamp" class="lien11">Wamp</a></li>
+						
+						<li><a href="https://www.eprojet.fr/cours/travail/01-travail-statut-independant,-freelance,-auto-entrepreneur,-portage-ou-societe" title="statut : indépendant ou salarié ?" class="lien12">Statut</a></li>
+						<li><a href="https://www.eprojet.fr/cours/travail/02-travail-construire-son-cv-pour-taper-dans-l-oeil-du-recruteur" title="CV" class="lien13">CV</a></li>
+						<li><a href="https://www.eprojet.fr/cours/culture_web/01-culture_web-culture-web" title="CultureWeb" class="lien13">Culture Web</a></li>
+					</ul>
+				</div>
+				<div class="menuResponsive">
+						<ul class="niveau1">
+							<li class="sousmenu sousmenu1 autre-sujet"><a href="#" class="lien-autre-sujet"><span class="mot-cache">Autres</span> sujets <img src="Eprojet%20%20%20Php_files/fleche-blanche-bas.png" style="float: right; margin: 21.5px 0 0 3px;"></a>
+								<ul class="niveau2">									
+									<li><a href="https://www.eprojet.fr/cours/html_css/01-html_css-introduction-html-css" title="intégration Html / Css" class="lien1">Html / Css</a></li>
+									<li><a href="https://www.eprojet.fr/cours/responsive_design/01-responsive_design-le-responsive-design" title="intégration Responsive Design" class="lien2">Responsive D.</a></li>
+									<li><a href="https://www.eprojet.fr/cours/bootstrap/01-bootstrap-framework-bootstrap" title="intégration Bootstrap" class="lien3">Bootstrap</a></li>
+									<li><a href="https://www.eprojet.fr/cours/newsletter_emailing/01-newsletter_emailing-les-newsletter-emailing" title="intégration Newsletter" class="lien4">Newsletter</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/sql/01-sql-base-de-donnees" title="développement Sql" class="lien5">Sql</a></li>
+									<li><a href="https://www.eprojet.fr/cours/php/01-php-intro-php" title="développement Php" class="lien6 active">Php</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/wordpress/01-wordpress-installation-et-configuration-de-wordpress" title="cms Wordpress" class="lien7">Wordpress</a></li>
+									<li><a href="https://www.eprojet.fr/cours/drupal/01-drupal-installation-et-configuration" title="cms Drupal" class="lien8">Drupal</a></li>						
+									
+									<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/01-cahier_des_charges_devis-rediger-un-cahier-des-charges" title="Cahiers des charges" class="lien9">Cahier des Charges</a></li>
+									<li><a href="https://www.eprojet.fr/cours/cahier_des_charges_devis/02-cahier_des_charges_devis-etablir-un-devis" title="Devis et modele de devis" class="lien10">Devis</a></li>
+									<li><a href="https://www.eprojet.fr/cours/wamp/01-wamp-configuration-de-wamp" title="Wamp" class="lien11">Wamp</a></li>
+									
+									<li><a href="https://www.eprojet.fr/cours/travail/01-travail-statut-independant,-freelance,-auto-entrepreneur,-portage-ou-societe" title="statut : indépendant ou salarié ?" class="lien12">Statut</a></li>
+									<li><a href="https://www.eprojet.fr/cours/travail/02-travail-construire-son-cv-pour-taper-dans-l-oeil-du-recruteur" title="CV" class="lien13">CV</a></li>
+									<li><a href="https://www.eprojet.fr/cours/culture_web/01-culture_web-culture-web" title="CultureWeb" class="lien13">Culture Web</a></li>
+								</ul>
+							</li>
+						</ul>
+				</div>
+				<div class="clear"></div>
+		</nav>
+		</header>	<section>		
+		<div class="conteneur">
+					<div class="colonne-gauche">
+				<script>sommaireAutomatique(20); var sujet = 'php' ;</script><h1> Evaluation</h1><div id="sommaire"><span class="sommaire">Sommaire</span><span class="lead">20.  Evaluation</span><a href="#php20.01" title="Accéder au chapitre n°20.01">20.01  &nbsp; Exercice 1 : Formulaire POST</a><a href="#php20.02" title="Accéder au chapitre n°20.02">20.02  &nbsp; Exercice 2 : Liens GET</a><a href="#php20.03" title="Accéder au chapitre n°20.03">20.03  &nbsp; Exercice 3 : Boucle</a><a href="#php20.04" title="Accéder au chapitre n°20.04">20.04  &nbsp; Exercice 4 : Calculatrice</a><a href="#php20.05" title="Accéder au chapitre n°20.05">20.05  &nbsp; Exercice 5 : Création d'un Repertoire</a><a href="#php20.06" title="Accéder au chapitre n°20.06">20.06  &nbsp; Exercice 6 : Création d'une Bibliothèque</a><a href="#php20.07" title="Accéder au chapitre n°20.07">20.07  &nbsp; Exercice 7 : Création d'une console</a><a href="#php20.08" title="Accéder au chapitre n°20.08">20.08  &nbsp; Exercice 7 : ATELIER - Création d'un site web complet</a><a href="#php20.09" title="Accéder au chapitre n°20.09">20.09  &nbsp; Exercice 7.1 : Les pages web côté FRONT</a><a href="#php20.10" title="Accéder au chapitre n°20.10">20.10  &nbsp; Exercice 7.2 :  Les pages web côté BACK</a></div><div class="pdf"><a title="Voir au format PDF" target="blank" href="https://www.eprojet.fr/cours/pdf/php-support.pdf"><img src="Eprojet%20%20%20Php_files/pdf.png">Voir au format PDF</a></div>	<div id="informations">
+		<div id="fil-arianne">Vous êtes ici : &gt;&gt; <a href="https://www.eprojet.fr/cours/php/20-php-evaluation">SQL /  Evaluation</a></div>
+		<div id="temps-niveau"><img src="Eprojet%20%20%20Php_files/horloge.png" class="imageprez"> <span class="texteprez texteprez2">Temps d'étude : 10 jours.</span> <img src="Eprojet%20%20%20Php_files/niveauMoyen.png" class="imageprez"> <span class="texteprez">Niveau : Moyen.</span></div><div class="clear"></div>
+		<div id="tags">Tags : <em> Evaluation</em></div>
+<div id="fichiers">Fichier(s) utile(s) pour ce cours : <img src="Eprojet%20%20%20Php_files/icone-fichier.png" class="icone-fichier"> <a href="https://www.eprojet.fr/cours/code/bibliotheque.rar" target="blank" download="" title="télécharger ce fichier pour pouvoir suivre le cours">bibliotheque.rar</a><br></div>
+		<div class="clear"></div>
+	</div>
+	<div class="clear"></div>
+	
+	
+	<h2 id="php20.01"><span class="petitnumero">20.01</span><span class="isocele"></span> <span class="contenu-h2">Exercice 1 : Formulaire POST</span></h2>
+	<strong>Exercice 1.1</strong><br>
+	Pour cet exercice, nous allons créer un formulaire en HTML avec une récupération des saisies en PHP.<br>
+	L'objectif est de récupérer les saisies postées sur la même page (juste au dessus du formulaire).<br>
+	<img src="Eprojet%20%20%20Php_files/icone-fichier.png" class="icone-fichier"> Créez une page « formulaire.php ».<br>
+	<img src="Eprojet%20%20%20Php_files/php200.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	<strong>Exercice 1.2</strong><br>
+	Créer un formulaire en affichant les saisies récupérées sur la même page. <br>
+	Champ à prévoir (contexte : produit) : titre, couleur, taille, poids, prix, description, stock, fournisseur.<br><br>
+
+	<strong>Exercice 1.3</strong><br>
+	Créer un formulaire en affichant les saisies récupérées sur deux pages différentes.  <br>
+	Champ à prévoir (contexte : voiture) : marque, modele, couleur, km, carburant, annee, prix, puissance, options.<br><br>
+
+	<strong>Exercice 1.4</strong><br>
+	Créer un formulaire en affichant les saisies récupérées et en 
+controlant que le pseudo soit compris entre 3 et 10 caractères maximum 
+(sinon prévoir un message d'erreur).   <br>
+	Champ à prévoir (contexte : membre) : pseudo, mdp, email.<br><br>
+
+	
+	<h2 id="php20.02"><span class="petitnumero">20.02</span><span class="isocele"></span> <span class="contenu-h2">Exercice 2 : Liens GET</span></h2>
+	<strong>Exercice 2.1</strong><br>
+	Pour cet exercice, nous allons créer plusieurs liens en HTML (qui 
+pointent vers la même page) avec une récupération des paramètres en PHP.<br>
+	L'objectif est de récupérer les paramètres véhiculés par l'url sur la même page.<br>
+	<img src="Eprojet%20%20%20Php_files/icone-fichier.png" class="icone-fichier"> Créez une page « lien.php ».<br>
+	<img src="Eprojet%20%20%20Php_files/php201.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	<strong>Exercice 2.2</strong><br>
+	Créer une page avec deux liens : homme, femme. <br>
+	Récupérer le texte du lien cliqué en affichant le message "Vous êtes un Homme" ou "Vous êtes une femme".<br><br>
+	
+	<strong>Exercice 2.3</strong><br>
+	Créer une page1 avec plusieurs liens (contexte : carte de restaurant) : pizza, salade, viande, poisson.   <br>
+	Récupérer le plat cliqué (dans la page1) et afficher-le sur la page2 en
+ adressant un message correspondant au choix de l'internaute.<br>
+	Exemple si l'on a cliqué sur <em>pizza</em> : "Vous avez choisi de manger 1 pizza" .<br><br>
+	
+	
+	<h2 id="php20.03"><span class="petitnumero">20.03</span><span class="isocele"></span> <span class="contenu-h2">Exercice 3 : Boucle</span></h2>
+	<strong>Exercice 3.1</strong><br>
+	Afficher des nombres allant de 1 à 100.<br><br>
+	<strong>Exercice 3.2</strong><br>
+	Afficher des nombres allant de 1 à 100 avec le chiffre 50 en rouge.<br><br>
+	<strong>Exercice 3.3</strong><br>
+	Afficher des nombres allant de 2000 à 1930.<br><br>
+	<strong>Exercice 3.4</strong><br>
+	Afficher le titre suivant 100 fois : &lt;h1&gt;Titre à afficher 100 fois&lt;/h1&gt;<br><br>
+	<strong>Exercice 3.5</strong><br>
+	Afficher le titre suivant "&lt;h1&gt;Je m\'affiche pour la Nème fois&lt;/h1&gt;".<br>
+	Remplacer le N avec la valeur de $i (tour de boucle).<br><br>
+	
+	
+	
+	<h2 id="php20.04"><span class="petitnumero">20.04</span><span class="isocele"></span> <span class="contenu-h2">Exercice 4 : Calculatrice</span></h2>
+	Pour cet exercice, nous allons créer une calculatrice en PHP, c'est un 
+classique qui a le mérite d'être formateur dans les débuts.<br>
+	<img src="Eprojet%20%20%20Php_files/icone-fichier.png" class="icone-fichier"> Créez une page « calculatrice.php ».<br>
+	La page calculatrice est un formulaire avec un menu déroulant qui nous 
+permet de choisir le signe de l’opération (addition, soustraction, 
+multiplication, division).<br><br>
+	<img src="Eprojet%20%20%20Php_files/php119.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	
+	<h2 id="php20.05"><span class="petitnumero">20.05</span><span class="isocele"></span> <span class="contenu-h2">Exercice 5 : Création d'un Repertoire</span></h2>
+	<strong>Exercice 5.1</strong> Créez une base de données que vous appellerez « repertoire ».<br>
+	A l’intérieur de celle-ci, vous créerez une table que vous appellerez « annuaire » avec les champs suivant : <br>
+	- id_annuaire (INT, 3, AI - PK)<br>
+	- nom (VARCHAR, 30)<br>
+	- prenom (VARCHAR, 30)<br>
+	- telephone (INT, 10, zerofill)<br>
+	- profession (VARCHAR, 30)<br>
+	- ville (VARCHAR, 30)<br>
+	- codepostal (INT, 5, zerofill)<br>
+	- adresse (VARCHAR, 30)<br>
+	- date_de_naissance (DATE)<br>
+	- sexe (ENUM, 'm','f')<br>
+	- description (TEXT)<br><br><br>
+	<hr class="miniHR">
+	
+	<strong>Exercice 5.2</strong> Créez une page « formulaire.php » qui aura une apparence similaire à l’image ci-dessous.<br>
+	<img src="Eprojet%20%20%20Php_files/php120.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	- Afficher le récapitulatif des saisies au dessus du formulaire (sur la même page).<br><br>
+	<hr class="miniHR">
+	
+	<strong>Exercice 5.3</strong> Une fois les valeurs récupérées du 
+formulaire, il faudra développer le code permettant l’insertion des 
+saisies dans la table « annuaire » de la base de données « repertoire ».<br>
+	Chaque validation du formulaire doit ajouter une nouvelle ligne d’enregistrement dans la table « annuaire ».<br>
+	<img src="Eprojet%20%20%20Php_files/php121.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<hr class="miniHR">
+	
+	<strong>Exercice 5.4</strong> Créez une page « affichage_annuaire.php »
+ qui permettra de récupérer les données et ainsi afficher le nom des 
+champs suivi des informations contenues à l’intérieur de la table « 
+annuaire ».<br>
+	<img src="Eprojet%20%20%20Php_files/php122.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<hr class="miniHR">
+	
+	<strong>Exercice 5.5</strong>, Sur la page « affichage_annuaire.php », Ajouter 2 informations :<br>
+	- Le nombre d’hommes<br>
+	- Le nombre de femmes<br><br>
+	<img src="Eprojet%20%20%20Php_files/php123.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<hr class="miniHR">
+	
+	<strong>Exercice 5.6</strong>, MODIFICATION ET SUPPRESSION
+	Sur la page « affichage_annuaire.php » :<br>
+	<ul>
+	<li>Donnez la possibilité de modifier les enregistrements (ouvrant un formulaire pour effectuer les modifications)</li>
+	<li>Donnez la possibilité de supprimer les enregistrements (avec un message demandant une confirmation).</li>
+	</ul><br>
+	Ces deux actions doivent être possibles directement via la page web.<br>
+	
+	
+	<h2 id="php20.06"><span class="petitnumero">20.06</span><span class="isocele"></span> <span class="contenu-h2">Exercice 6 : Création d'une Bibliothèque</span></h2>
+
+<h3>Consigne</h3>
+Ce sujet à pour objectif de tester vos compétences techniques (php et sql) en situation réélle.<br><br>
+
+
+<h3>Exercice 6.1 – Creation d'une base de données</h3>
+Créez une base de données que vous appellerez « bibliotheque ».<br>
+A l’intérieur de celle-ci, vous créerez trois tables que vous appellerez
+ « abonne », « emprunt » et « livre » avec les champs suivants : <br><br>
+Table : abonne<br>
+	Champs :<br> 
+	- id_abonne (PK – AI – INT(3))<br>
+	- prenom (VARCHAR(25))<br><br>
+	Table : emprunt<br>
+	Champs : <br>
+	- id_emprunt (PK – AI – INT(3))<br>
+	- id_livre (FK - INT(3))<br>
+	- id_abonne (FK - INT(3))<br>
+	- date_sortie (DATE)<br>
+	- date_rendu (DATE – DEFAULT NULL)<br><br>
+	Table : livre<br>
+	Champs : <br>
+	- id_livre(PK – AI – INT(3))<br>
+	- auteur (VARCHAR(25))<br>
+	- titre (VARCHAR(50))<br><br><br>
+	
+Et voici les contenus :<br><br>
+<table border="1">
+	<tbody><tr>
+		<th colspan="2">Abonne</th>
+	</tr>
+	<tr>
+		<td>id_abonne</td>
+		<td>prenom</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Guillaume</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Benoit</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Chloe</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Laura</td>
+	</tr>
+</tbody></table><br>
+
+<table border="1">
+	<tbody><tr>
+		<th colspan="5">Emprunt</th>
+	</tr>
+	<tr>
+		<td>id_emprunt</td>
+		<td>id_livre</td>
+		<td>id_abonne</td>
+		<td>date_sortie</td>
+		<td>date_rendu</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>100</td>
+		<td>1</td>
+		<td>2011-12-17</td>
+		<td>2011-12-18</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>101</td>
+		<td>2</td>
+		<td>2011-12-18</td>
+		<td>2011-12-20</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>100</td>
+		<td>3</td>
+		<td>2011-12-19</td>
+		<td>2011-12-22</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>103</td>
+		<td>4</td>
+		<td>2011-12-19</td>
+		<td>2011-12-22</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>104</td>
+		<td>1</td>
+		<td>2011-12-19</td>
+		<td>2011-12-28</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>105</td>
+		<td>2</td>
+		<td>2012-03-20</td>
+		<td>2012-03-26</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>105</td>
+		<td>3</td>
+		<td>2013-06-13</td>
+		<td>NULL</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>100</td>
+		<td>2</td>
+		<td>2013-06-15</td>
+		<td>NULL</td>
+	</tr>
+</tbody></table><br>
+
+
+<table border="1">
+	<tbody><tr>
+		<th colspan="3">Livre</th>
+	</tr>
+	<tr>
+		<td>id_livre</td>
+		<td>auteur</td>
+		<td>titre</td>
+	</tr>
+	<tr>
+		<td>100</td>
+		<td>GUY DE MAUPASSANT</td>
+		<td>Une vie</td>
+	</tr>
+	<tr>
+		<td>101</td>
+		<td>GUY DE MAUPASSANT</td>
+		<td>Bel-Ami</td>
+	</tr>
+	<tr>
+		<td>102</td>
+		<td>HONORE DE BALZAC</td>
+		<td>Le pere Goriot</td>
+	</tr>
+	<tr>
+		<td>103</td>
+		<td>ALPHONSE DAUDET</td>
+		<td>Le Petit chose</td>
+	</tr>
+	<tr>
+		<td>104</td>
+		<td>ALEXANDRE DUMAS</td>
+		<td>La Reine Margot</td>
+	</tr>
+	<tr>
+		<td>105</td>
+		<td>ALEXANDRE DUMAS</td>
+		<td>Les Trois Mousquetaires</td>
+	</tr>
+</tbody></table><br><hr>
+
+
+<h3>Exercice 6.2 – Les Entites</h3>
+Prévoir 3 affichages :<br>
+o	 abonne<br>
+o	 emprunt<br>
+o	 livre<br>
+
+<i>Mettre en place un menu de navigation pour accèder aux différents affichages (1 affichage par entité).</i><br><br>
+
+
+<h3>Exercice 6.3 - formulaire et enregistrement des donnees</h3>
+o	 Créez un formulaire pour chaque entité : abonne, emprunt et livre.<br>
+o	 Réaliser des contrôles de saisies.<br>
+o	 Enregistrer les données dans les tables correspondantes de la base.<br><br>
+
+
+<h3>Exercice 6.4 - Affichage</h3>
+o	Pour chaque entité, créer une partie qui affichera chaque table sql en
+ table html sur la page web.  ( « abonne », « livre » et « emprunt » ).<br><br>
+
+<h3>Exercice 6.5 – Modification et Suppression</h3>
+o	Développer une option permettant la suppression des enregistrements (prévoir un message demandant une confirmation).<br>
+o	Développer une option permettant la modification des enregistrements 
+(prévoir l'ouverture d'un formulaire pour effectuer les modifications).<br>
+
+<i>Ces deux actions doivent être possible directement via la page web pour toutes les données (abonne, livre et emprunt).</i><br><br>
+
+
+<h3>Type de résultat attendu</h3>
+<img src="Eprojet%20%20%20Php_files/bibliotheque1.jpg"><br>
+<img src="Eprojet%20%20%20Php_files/bibliotheque2.jpg"><br>
+<img src="Eprojet%20%20%20Php_files/bibliotheque3.jpg"><br>
+	
+	<h3>EXERCICE 6.6</h3> 
+	<em>Réaliser divers affichages.</em><br>
+	o	Afficher le nombre d’abonnés.<br>
+	o	Afficher le nombre de livres.<br>
+	o	Afficher le nombre d'emprunts.<br>
+	o	Afficher les numéros et titres des livres n’ayant pas été rendus à la bibliothèque<br>
+	o	Afficher le n° de(s) livre(s) que Chloé a emprunté à la bibliothèque<br>
+	o	Afficher la liste des abonnés ayant déjà emprunté un livre d’Alphonse DAUDET<br>
+	o	Afficher les titres des livres que Chloé n’a pas encore rendus à la bibliothèque.<br>
+	o	Afficher les titres des livres que Chloé n’a pas encore empruntés.<br>
+	o	Afficher le prénom de l’abonné ayant emprunté le plus de livres<br>
+	o	Afficher le nombre de livre emprunté par Guillaume<br>
+	o	Afficher la liste des abonnés ayant emprunté le livre « Une Vie » sur l’année 2011<br>
+	o	Afficher le nombre de livres empruntés par chaque abonné<br>
+	o	Afficher la liste des abonnés avec les titres des livres qu’ils ont empruntés ainsi que la date de l’emprunt<br>
+	<br>
+	
+	<p style="text-align: center;"><a href="https://www.eprojet.fr/cours/code/bibliotheque.rar" target="blank">Télécharger la correction de l'exercice bibliotheque</a></p>
+	
+<h2 id="php20.07"><span class="petitnumero">20.07</span><span class="isocele"></span> <span class="contenu-h2">Exercice 7 : Création d'une console</span></h2>
+Le but de cet exercice va être de redévelopper une console permettant d'exécuter des requêtes SQL via une page web.<br><br>	
+<h3>Exercice 7.1 : Création d'un formulaire</h3>
+Le premier exercice consiste a créer un formulaire comme ceci :<br>	
+<img src="Eprojet%20%20%20Php_files/php202.jpg"><br>
+La zone de saisie doit nous permettre de lancer une requête sur la base de données nommée « entreprise ».<br><br>
+
+<h3>Exercice 7.2 : Traitement et résultat</h3>
+Le résultat doit apparaitre comme ci-dessous accompagné des différentes 
+informations tels que le nombre de lignes retournées, la requête et la 
+base concernée ainsi qu’un message de validation ou d’erreur selon le 
+succès ou l’échec de la requête.<br>
+<img src="Eprojet%20%20%20Php_files/php203.jpg"><br><br>
+
+<h3>Exercice 7.3 : Amélioration du formulaire</h3>
+Ajoutez un champ listant les différentes bases de données dont nous 
+disposons en option séléctionnable avec la possibilité d’effectuer une 
+requête sur la base de données séléctionnée.<br>
+<img src="Eprojet%20%20%20Php_files/php204.jpg"><br>
+Le 1er champ doit lister les bases de données disponible tandis que le 
+second champ permettra de formuler une requête sur la base qui aura été 
+sélectionnée.<br>
+
+Après validation du formulaire, vous devrez faire en sorte de laisser 
+afficher la dernière requête exécutée dans la zone de saisie et 
+également présélectionnez la dernière option choisie pour la base de 
+données utilisée.<br><br>
+
+<h3>Exercice 7.4 : Amélioration du résultat</h3>
+Affichez le résultat sur la même page avec des informations 
+supplémentaires tels que les noms des tables disponibles sur la base de 
+données sélectionnée pour effectuer la requête.<br>
+<img src="Eprojet%20%20%20Php_files/php205.jpg"><br><br>
+
+<h3>Exercice 7.5 : Exécution des requêtes</h3>
+Ajoutez la possibilité d’exécuter d’autres types de requête tels que : select, insert, update, delete, replace, show, etc.<br>
+<img src="Eprojet%20%20%20Php_files/php206.jpg"><br><br>
+
+<h3>Exercice 7.6 : Message</h3>
+Votre requête doit s’exécuter et votre page doit vous indiquer si la requête est validée : <br>
+<img src="Eprojet%20%20%20Php_files/php207.jpg"><br>
+Ou, dans le cas contraire, affichez l’erreur qui serait survenue :<br>
+<img src="Eprojet%20%20%20Php_files/php208.jpg"><br><br>
+
+<h3>Exercice 7.7 : Historique</h3>
+Toutes les requêtes (peu importe leur type) qui ont été exécutées avec 
+succès doivent être conservées dans un fichier « historique.txt ». En 
+effet, dans ce fichier nous devons y retrouver l’historique des requêtes
+ ayant été exécutées sur votre page ainsi que la base de données 
+concernée.<br>
+<img src="Eprojet%20%20%20Php_files/php209.jpg"><br><br>
+
+<h3>Exercice 7.8 : Affichage de l'historique</h3>
+Toutes les requêtes conservées dans le fichier  « historique.txt » doivent apparaitre sur la page.<br>
+<img src="Eprojet%20%20%20Php_files/php210.jpg"><br><br>
+
+<h3>Exercice 7.9 : Exécution de l'historique</h3>
+Ajoutez la possibilité de cliquer sur les requêtes (contenues dans 
+l'historique) directement pour les exécuter à nouveau via la page web.<br>
+Une requête peut être saisie dans la zone réservée à cet effet ou être 
+exécutée en cliquant sur les liens proposés par l’affichage de 
+l’historique. Ceci est valable pour tous les types de requête.
+<br>
+<img src="Eprojet%20%20%20Php_files/php211.jpg"><br>
+Vous devrez également penser à proposer un bouton permettant de 
+supprimer l’historique des requêtes contenues dans le fichier « 
+historique.txt » en supprimant le fichier.<br><br>
+
+<h3>Exercice 7.10 : Interface</h3>
+Recréez une interface de gestion de base de données avec un maximum 
+d’options pour exploitez les données (ex : export des données).<br>
+Exemple : PHPMYADMIN ou SQLBUDDY.<br>
+Cette interface devra être innovante, fonctionnelle et intuitive.<br>
+
+	
+	
+	
+	<h2 id="php20.08"><span class="petitnumero">20.08</span><span class="isocele"></span> <span class="contenu-h2">Exercice 7 : ATELIER - Création d'un site web complet</span></h2>
+	Voici le cahier des charges : <br>
+	<h3>Présentation</h3>
+	LOKISALLE est une société imaginaire. Les informations concernant LOKISALLE sont factices.<br>
+	<ul>
+		<li>Raison sociale : LOKISALLE</li>
+		<li>Type de structure : SARL</li>
+		<li>Adresse : 300 Boulevard de Vaugirard, 75015 Paris, France</li>
+		<li>Mission : La société est spécialisée dans la location de salle 
+pour l’organisation de réunion par les entreprises ou les particuliers.</li>
+		<li>Périmètre géographique de l’activité : La société dispose de 
+salles dans toute la France et plus précisément à Paris, Lyon et 
+Marseille.</li>
+	</ul><br>
+	
+	<h3>Objectifs et Bénéfices</h3>
+	Le projet vise à offrir un ensemble de services basés sur les TIC permettant notamment :<br>
+	<ul>
+		<li>au grand public (visiteurs) de découvrir l’activité de LOKISALLE.</li>
+		<li>au grand public de consulter le catalogue produits ainsi que les fiches des produits proposés par LOKISALLE. </li>
+		<li>aux clients d’acheter en ligne des produits proposés dans le catalogue produits de LOKISALLE.</li>
+		<li>aux membres de partager des avis sur les salles, de noter les salles, d’être informés des nouveautés et promotions de LOKISALLE.</li>
+		<li>aux gérants (administrateurs du site) de LOKISALLE d’alimenter le 
+catalogue produits, de consulter la liste des commandes, d’envoyer une 
+newsletter aux membres, etc.</li>
+	</ul><br>
+
+	<h3>Architecture logicielle</h3>
+	L’architecture logicielle sous-jacente au site devra utiliser les technologies récentes éprouvées.<br>
+	La solution devra autant que possible remplir les spécifications suivantes :<br>
+	<ul>
+		<li>architecture ouverte basée sur l’utilisation du couple PHP/MySQL.</li>
+		<li>technologies standard pour la structuration et la description des données aussi bien que des interfaces (HTML/CSS).</li>
+	</ul> <br>
+
+	<h3>Ergonomie</h3>
+	La page d’accueil du portail a une importance primordiale : elle doit, 
+en quelques secondes, donner à l’utilisateur une vision de ce qu’il peut
+ attendre du site. Tout malentendu à ce niveau peut frustrer 
+l’utilisateur, interrompre la visite et entacher l’image de LOKISALLE. <br>
+	Le site web doit être adaptable et prévoir une version responsive design.<br>
+	Ces principes devront rester cohérents avec les objectifs et les contraintes du site. <br><br>
+	Les schémas introduits dans ce document sont présents à titre explicatif, il ne s’agit pas d’une suggestion de mise en forme.<br>
+	Les fonctionnalités seront les mêmes d’un projet à un autre (respect du cahier des charges).<br>
+	De ce fait, il serait donc intéressant que vous vous démarquiez via le design de votre site.<br>
+	Vous aurez donc carte blanche sur cette partie, l’idéal serait 
+d’innover et d’être inventif sur les choix d’ergonomie. Le jury y sera 
+sensible. <br><br>
+
+	<h3>Contraintes</h3>
+	L’ensemble du portail devra être compatible avec les navigateurs les plus utilisés du marché, soit :<br>
+	<ul>
+		<li>Mozilla Firefox - dernières versions,</li>
+		<li>Internet Explorer - dernières versions,</li>
+		<li>Chrome - dernières versions.</li>
+	</ul>
+	La sécurité sur le site devra couvrir les notions de confidentialité, de droit d’accès et d’authentification.<br><br>
+
+	<h3>Référencement</h3>
+	Le référencement et le positionnement d’un site au niveau des 
+différents outils de recherche de l’Internet (annuaires, moteurs) sont 
+d’une importance cruciale pour attirer une bonne audience.<br>
+	Les principes et règles de métier pour atteindre ces deux objectifs 
+seront mis en œuvre dès la conception du portail. (Respect des normes 
+w3c).<br>
+
+	<h3>Planification du projet</h3>
+	Le planning de la prestation se conformera aux étapes suivantes : <br>
+	<ul>
+		<li>Création des maquettes graphiques</li>
+		<li>Lancement de l’intégration et du développement</li>
+		<li>Création d’une version du site Internet</li>
+		<li>Tests, débogages, validation finale</li>
+		<li>Mise en Ligne</li>
+		<li>Livraison</li>
+	</ul><br>
+
+	<h3>Précisions</h3>
+	« LOKISALLE est une société imaginaire. Les informations concernant LOKISALLE sont factices »<br>
+	Pour le bon déroulement du projet, veillez à prendre des images et texte libre de droit.<br>
+	N’oubliez pas de préciser dans les mentions légales que ce site n’est 
+pas réalisé dans un but commercial mais dans le but de répondre à un 
+atelier PHP.<br><br>
+
+	Le site doit être sur internet et hébergé sur le web pour une présentation client.<br><br>
+
+	Arguments à bannir : « je n’ai pas eu le temps » « j’étais en 
+entreprise », « c’était trop difficile je ne l’ai pas fait »,  « je ne 
+savais pas que le rendu était pour aujourd’hui », « mon pc est tombé en 
+panne hier et je n’avais pas d’autres sauvegardes », « j’avais d’autres 
+projets urgents », « j’étais en plein déménagement, désolé ! », etc. <br><br>
+	
+	<h3>Conseil</h3>
+	Pensez à mettre votre site en ligne et tout « re-tester »  au moins 10 jours avant les soutenances.<br>
+	On ne va pas en présentation chez un client avec un site mis en ligne la veille.<br><br>
+
+	<h3>Justesse</h3>
+	Le respect du cahier des charges est fondamental. Vous devrez également
+ complètement « rentré(e) » dans votre sujet afin de prévoir des tests 
+de débogage ainsi que des tests de cohérence qui ne sont pas forcément à
+ mentionner par le client.<br><br>
+	Exemple :<br>
+	<ul>
+		<li>Que se passe t-il si un membre tente de s’inscrire deux fois à la newsletter ?</li>
+		<li>Peut-on créer ou réserver un produit sur des dates antérieures dans le temps ?</li>
+		<li>Y’a-t-il des moyens d’altérer le comportement initialement prévu du site via l’url ou d’autres points d’entrée (sécurité) ?</li>
+		<li>Que se passe t’il lorsqu’un membre est supprimé (commandes, avis, newsletter, etc) ?</li>
+		<li>Que se passe t’il lorsqu’une salle est supprimée (produits, avis, commandes, etc.) ?</li>
+		<li>Est-il possible de créer 2 produits sur la même salle et sur des dates qui se chevauchent ?</li>
+	</ul>
+	Des tests de cohérence seront réalisés lors de la livraison du projet.<br>
+	L’aspect sécurité est également important.<br>
+	Il faut bien discerner la limite entre l'assurance de livrer un produit fiable et la responsabilité du client sur ce produit.<br><br>
+	
+	
+	<h2 id="php20.09"><span class="petitnumero">20.09</span><span class="isocele"></span> <span class="contenu-h2">Exercice 7.1 : Les pages web côté FRONT</span></h2>
+	<h3>Exercice 7.101 : Accueil (index.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php127.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description </u>:<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond au texte qui présente notre activité (location de salles).<br>
+	<span class="numero-rouge">4</span> correspond aux trois dernières offres (évidemment supérieures à la date du jour et « réservable »)<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	<u>Recommandations </u>:<br>
+	Il serait judicieux pour la zone <span class="numero-rouge">2</span> de créer un fichier « menu.inc.php » afin d’y mettre tous les liens et de l’inclure sur toutes les pages. (idem pour la zone <span class="numero-rouge">1</span> « haut.inc.php » : doctype, appel vers la feuille de style, etc. - et pour la zone <span class="numero-rouge">5</span> « bas.inc.php »: à nouveau des liens).<br>
+	Texte cohérent avec l’activité pour la zone <span class="numero-rouge">3</span>.<br>
+	Bien entendu pour la zone <span class="numero-rouge">4</span> il s’agit
+ d’un affichage « dynamique » les informations proviennent de la base de
+ données (voir les tables : produits et salles).<br>
+	Le lien « connectez-vous pour l’ajouter au panier » pointe sur la page connexion.php.<br>
+	<span class="numero-rouge">4</span> Deux choix s’offrent alors à l'internaute :<br>
+	o	Voir la fiche détaillée le lien pointe sur « reservation_details.php »
+ (cette page n’est pas répertoriée dans la zone 2 du menu). (il convient
+ impérativement de passer l’id du produit pour avoir l’affichage complet
+ relatif à ce produit).<br>
+	Et c’est le cas pour trois des pages du menu :<br>
+	<img src="Eprojet%20%20%20Php_files/php128.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	o	Après s’être connecté : Ajouter directement le produit au panier, le bouton pointe sur « panier.php ». 
+	<img src="Eprojet%20%20%20Php_files/php129.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	(il faudra alors passer l’id du produit).  Et c’est une possibilité pour trois des pages du menu : <br>
+	<img src="Eprojet%20%20%20Php_files/php130.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	Pour les pages index.php – reservation.php – recherche.php ; Si aucun 
+produit n’est réservable, nous prévoirons un message d’information « 
+aucune offre pour le moment ». <br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.102 : Réservation (reservation.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php131.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description </u>:<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond à l’ensemble de toutes nos offres (évidemment supérieures à la date du jour et « réservable »).<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	
+	<u>Recommandations </u>:<br>
+	Bien entendu pour la zone <span class="numero-rouge">3</span> il s’agit
+ d’un affichage « dynamique » les informations proviennent de la base de
+ données (voir les tables : produits et salles).<br>
+	Le lien « connectez-vous pour l’ajouter au panier » pointe sur la page connexion.php.<br>
+	Cette page est similaire à la page d’accueil. Deux choix s’offrent à nous :<br>
+	<ul>
+		<li>Voir la fiche détaillée le lien pointe sur « reservation_details.php » (cette page n’est pas répertoriée dans la zone <span class="numero-rouge">2</span> du menu). (il convient impérativement de passer l’id du produit pour avoir l’affichage complet relatif à ce produit).</li>
+		<li>Après s’être connecté : Ajouter directement le produit au panier, 
+le bouton pointe sur « panier.php ».  (Il faudra alors passer l’id du 
+produit sur la page panier).</li>
+	</ul><br>
+	<img src="Eprojet%20%20%20Php_files/php129.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.103 : Recherche (recherche.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php132.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description </u>:<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond à l’ensemble de toutes nos offres (évidemment supérieures à la date choisie par l’internaute et « réservable ») <br>
+	<span class="numero-rouge">4</span> correspond à la recherche 
+l’internaute peut ainsi choisir la date à laquelle il souhaite louer une
+ salle et le site affiche les salles « réservable » pour ou à partir de 
+cette date.<br>
+	* Par défaut, les champs déroulants seront positionnés sur le mois et l’année en cours.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	
+	<u>Recommandations </u>:<br>
+	Bien entendu pour la zone 3 il s’agit d’un affichage « dynamique » les 
+informations proviennent de la base de données (voir les tables : 
+produits et salles).<br>
+	Deux choix s’offrent à nous :<br>
+	<ul>
+		<li>Voir la fiche détaillée le lien pointe sur « reservation_details.php » (cette page n’est pas répertoriée dans la zone <span class="numero-rouge">2</span> du menu). (il convient impérativement de passer l’id du produit pour avoir l’affichage complet relatif à ce produit).</li>
+		<li>Après s’être connecté : Ajouter directement le produit au panier, le bouton pointe sur « panier.php ».</li>
+	</ul>
+	<img src="Eprojet%20%20%20Php_files/php129.jpg" alt="explication PHP" title="explication PHP"><br><br>
+
+	Il faudra alors passer l’id du produit sur la page panier.<br>
+
+	Il s’agit du même type d’affichage que sur la page reservation.php.<br>
+
+	<span class="numero-rouge">4</span>, il faudra bien penser à récupérer 3
+ valeurs lors de la validation de la rechercher par l’utilisateur et ne 
+pas oublier de prendre en compte le format de date américain 
+(ANNEE/MOIS/JOUR) avant de transmettre le tout.<br>
+	<hr class="miniHR">
+	
+	<h3>Exercice 7.104 : Réservation en détail (reservation_details.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php133.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	<u>Description </u>:<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes partiellement 
+dans le cas visiteur.<br>
+	<span class="numero-rouge">3</span> correspond aux informations importantes de la salle : photo, titre, texte de description, capacité et catégorie. <br>
+	<span class="numero-rouge">4</span> correspond aux informations complémentaires de la salle.<br>
+	<span class="numero-rouge">6</span> correspond à la zone d’affichage de
+ commentaires et de notations. Attribution possible de commentaires et 
+de notes par les personnes connectées (admin ou membres) uniquement.<br>
+	Nous restons sur la même page après soumission du commentaire ET de la note.<br>
+	<span class="numero-rouge">6*</span> le schéma montre la vision d’une personne membre pour cette zone. <br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	
+	<u>Recommandations </u>:<br>
+	Il faut bien souligner le fait que nous sommes sur la page détaillée d’un produit.<br>
+	Afin d’arriver sur cette page et d’obtenir les informations attendues, 
+cela implique que l’internaute ait cliqué sur « voir la fiche détaillée »
+ via la page index.php ou reservation.php ou encore recherche.php et 
+soit conduit vers la page reservation_details.php ?id_produit=N. <br><br>
+
+	Bien entendu pour la zone <span class="numero-rouge">3</span> et <span class="numero-rouge">4</span>
+ il s’agit d’un affichage « dynamique » les informations proviennent de 
+la base de donnée (voir les tables suivantes : salles, produits). 
+L’affichage d’un plan d’accès peut accompagner les informations.<br><br>
+
+	Concernant la zone <span class="numero-rouge">6</span>, nous retrouvons
+ l’affichage des commentaires des internautes souhaitant laisser leur 
+avis sur la location de cette salle (salle et non produit, une salle 
+peut « être » affiliée à plusieurs produits à la fois). Il faut se 
+rapprocher des tables suivantes : (membres, avis, salles)<br>
+	Dans cette zone, si l’internaute qui se rend sur cette page n’est pas 
+membre ou admin (il sera donc visiteur) et à la place du formulaire pour
+ le dépôt de commentaire, nous lui afficherons la phrase suivante : « il
+ faut être connecté pour pouvoir déposer des commentaires ».<br>
+	Dans cette même zone, si l’internaute à déjà laisser un commentaire 
+pour cette salle nous lui afficherons les commentaires des autres 
+internautes puis un message « merci pour votre contribution » à la place
+ du formulaire d’ajout de commentaire (un membre ne peut donc laisser 
+qu’un commentaire par salle).<br><br>
+
+	Il faudra ajouter la TVA à 20% en plus pour obtenir le prix total.<br><br>
+
+	Si l’internaute qui se rend sur cette page n’est pas membre ou admin 
+(il sera donc visiteur) et à la place du bouton « ajouter au panier », 
+nous lui afficherons la phrase suivante : « Veuillez vous inscrire ou 
+vous connecter pour pouvoir effectuer une réservation ».<br><br>
+
+	<span class="numero-rouge">7</span>  Affichez une suggestion de 
+produits similaires au produit qui est sélectionné par l’internaute afin
+ de faciliter les recherches croisées.<br>
+	Il faudra cependant proposer des produits similaires en termes de dates et de localisation choisie par l’internaute.<br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.105 : Front - Se connecter (connexion.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php134.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond à l’interface de connexion afin qu’un membre puisse accéder à son compte.<br>
+	<span class="numero-rouge">4</span> correspond à un simple lien qui propose à un visiteur de s’inscrire afin de devenir membre.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	<u>Recommandations </u>:<br>
+	<span class="numero-rouge">3</span> Seulement si l’internaute a le bon 
+pseudo ET le bon mot de passe il doit pouvoir accéder à son profil « 
+profil.php », il suffit de faire une redirection. Attention si ce n’est 
+pas le cas, nous restons sur cette page en lui signifiant un message 
+d’erreur.<br>
+	La case « Se souvenir de moi » peut être cochée par l’utilisateur, ce 
+choix est facultatif, mais s’il la coche vous devrez sauvegarder son 
+pseudo pour les prochaines connexions. C'est-à-dire que s’il se 
+déconnecte et qu’il tente de se reconnecter via cette même page « 
+connexion.php », il ne devrait plus avoir à renseigner son pseudo.<br>
+	<span class="numero-rouge">4</span> Voici un simple lien qui mène vers la page « inscription.php » si le membre n’a pas encore de compte.<br>
+	<span class="numero-rouge">2</span> Le lien « Inscrivez-vous » sur la partie de droite pointe vers la page « inscription.php ».<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.106 :  Front - Mot de passe perdu (motdepasseperdu.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php135.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond à la zone de saisie permettant à l’internaute de saisir son adresse email pour recevoir son nouveau mot de passe.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+
+	<u>Recommandations </u>:
+	<span class="numero-rouge">2</span>  Cette page n’est pas répertoriée dans la zone 2 du menu et n’est accessible qu’après s’être rendu sur la page de connexion.<br><br>
+
+	<span class="numero-rouge">3</span>  L’internaute doit saisir l’adresse
+ email qu’il a utilisée lors de son inscription. A partir de cette 
+information, vous pourrez lui générer un nouveau mot de passe et lui 
+communiquer par email sans oublier de mettre à jour la base de données. 
+Il ne faut pas oublier de gérer le cas où l’internaute saisit une 
+adresse email qui n’existe pas.<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.107 :  Front - Créer un nouveau compte (inscription.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php135.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+visiteur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+visiteur.<br>
+	<span class="numero-rouge">3</span> correspond au formulaire d’inscription afin qu’un membre puisse s’inscrire.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	 
+	<u>Recommandations</u> :<br>
+	<span class="numero-rouge">3</span> Vérifier que vous avez récupéré 
+toutes les informations du formulaire avant de les envoyer en base de 
+données pour l’insertion dans la table membres.<br>
+	Vérifier que l’adresse email soit correcte.<br>
+	Le pseudo et le mot de passe doivent faire au minimum 3 caractères.<br><br>
+
+	Les pages de connexion, inscription, mot de passe oublié, etc. ne 
+doivent être accessibles uniquement en tant que visiteur (non connecté).<br>
+	Si un membre connecté venait à se rendre sur ces pages par mégarde, 
+nous le redirigerons ou lui mentionnerons qu’il est déjà connecté<br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.108 :  Front - Mentions Légales (mentions.php)</h3>
+	<u>Description</u> :<br>
+	3 correspond au texte des Mentions Légales<br><br>
+
+	<u>Recommandations</u> :<br>
+	Aucune recommandation particulière<br>
+
+	<hr class="miniHR">
+
+	<h3>Exercice 7.109 :  Front - Conditions Générales de Vente (cgv.php)</h3>
+	<u>Description</u> :<br>
+	3 correspond au texte des CGV<br><br>
+
+	<u>Recommandations</u> :<br>
+	Aucune recommandation particulière<br>
+
+	<hr class="miniHR">
+
+	<h3>Exercice 7.110 :  Front - Plan du site (plan.php)</h3>
+	<u>Description</u> :<br>
+	3 correspond au texte des CGV<br><br>
+
+	<u>Recommandations</u> :<br>
+	Aucune recommandation particulière<br>
+
+	<hr class="miniHR">
+	
+	<h3>Exercice 7.111 :  Front - Imprimer la page</h3>
+	Un simple lien pour imprimer la page courante.<br>
+	<hr class="miniHR">
+	
+	<h3>Exercice 7.112 : Front -  S’inscrire à la newsletter (newsletter.php)</h3>
+	<u>Description</u> :<br>
+	La page contient un lien permettant de s’inscrire à la newsletter.<br><br>
+	<u>Recommandations</u> :<br>
+	Attention l’internaute doit être membre (ou admin) pour voir apparaître
+ cette proposition d’abonnement. Si l’internaute est visiteur, il ne 
+possèdera pas d’id_membre, nous l’inviterons à s’inscrire au site avant 
+de s’abonner à la newsletter. (table : newsletter).<br><br>
+	
+	<img src="Eprojet%20%20%20Php_files/php136.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	La page contient un lien permettant de s’inscrire à la newsletter.<br><br>
+	<u>Recommandations</u> :<br>
+	Attention l’internaute doit être membre (ou admin) pour voir apparaître
+ cette proposition d’abonnement. Si l’internaute est visiteur, il ne 
+possèdera pas d’id_membre, nous l’inviterons à s’inscrire au site avant 
+de s’abonner à la newsletter. (table : newsletter).<br><br>
+	
+	<h3>Exercice 7.113 :  Front - Contact (contact.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php137.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">3</span> correspond à l’affichage du formulaire d’envoi d’email.<br><br>
+	<u>Recommandations</u> :<br>
+	<span class="numero-rouge">3</span>, un membre peut envoyer un message à l’administrateur du site. <br>
+	Si l’internaute qui souhaite contacter l’admin est simple visiteur, il 
+peut également lui envoyer un message, pour cela il faudra ajouter un 
+champ « expéditeur » dans le formulaire de contact afin que 
+l’administrateur sache à quelle adresse email il doit répondre.<br><br>
+	
+	<h3>Exercice 7.114 : Front -  Profil (profil.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php138.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu (attention il 
+est évolutif suivant l’internaute : visiteur, membre, administrateur). 
+Ci-dessus nous sommes dans le cas membre. Vous pouvez remarquer que les 
+liens « Connexion  |  Créer un nouveau compte » se sont transformés en «
+ Se déconnecter ».<br>
+	<span class="numero-rouge">3</span> correspond à la zone récapitulative
+ des informations du membre. Il est également possible qu’un membre 
+mette à jour ses informations. <br>
+	<span class="numero-rouge">4</span> correspond à la zone récapitulative des dernières commandes passées sur le site.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	<u>Recommandations</u> :<br>
+	<span class="numero-rouge">3</span> et <span class="numero-rouge">4</span>
+  Un membre ou un admin ne peut accéder à son profil que s’il s’est 
+connecté avant via la page « connexion.php », et lors de sa connexion 
+nous lui « remplissons » une session, il suffit de ressortir les 
+informations de cette session sur la page « profil.php » afin de 
+récupérer les informations sur le membre ou l’admin. Cette page n’est 
+donc pas disponible pour les visiteurs.<br>
+	<span class="numero-rouge">3</span>  Le lien « mettre à jour mes 
+informations »  doit ouvrir un formulaire de modification de compte. Il 
+sera similaire au formulaire d’inscription. Cependant les informations 
+actuelles du membre doivent apparaitre dans les zones de saisies du 
+formulaire afin que le membre puisse rectifier seulement ce qu’il 
+souhaite sans devoir re-saisir chacune des informations.<br><br>
+	
+	<h3>Exercice 7.115 :  Front - Panier (panier.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php139.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">1</span> correspond à la zone du haut, nous y retrouverons le logo et la bannière.<br>
+	<span class="numero-rouge">2</span> correspond au menu (attention il 
+est évolutif suivant l’internaute : visiteur, membre, administrateur). 
+Ci-dessus nous sommes dans le cas membre. Vous pouvez remarquer que les 
+liens « Connexion  |  Créer un nouveau compte » se sont transformés en «
+ Se déconnecter ».<br>
+	<span class="numero-rouge">3</span> correspond au panier du membre ou admin.<br>
+	<span class="numero-rouge">5</span> correspond à la zone du bas, nous y retrouvons plusieurs liens.<br><br>
+	<u>Recommandations</u> :<br>
+	<span class="numero-rouge">3</span> On ne peut accéder qu’à son panier 
+en tant que membre, administrateur via la zone de menu 2 ou alors en 
+étant envoyé par le bouton « ajouter au panier » sur les pages suivantes
+ : <br>
+	« index.php » - « reservation.php » - « reservation_details.php » - « recherche.php »<br><br>
+
+	Si l’internaute n’est pas connecté (donc simple visiteur) et se 
+retrouve sur la page « panier.php » nous lui afficherons « vous devez 
+vous connecter avant d'accéder à votre panier ».<br>
+	Si l’internaute (membre ou admin) qui accède à son panier tente 
+d’ajouter deux fois le même produit, nous lui afficherons « ce produit 
+est déjà dans votre panier ». Effectivement il ne peut réserver deux 
+fois le même produit.<br><br>
+
+	Vider mon panier est un lien vers la même page « panier.php » qui 
+déclenche une action afin de « vider » le contenu de son panier.<br>
+	La croix « x » à coté du produit est un lien permettant de « retirer » 
+un des produit(s) du panier sans affecter le restant des produits dans 
+le panier.<br><br>
+
+	L’internaute peut payer (seulement s’il est membre ou admin) et surtout
+ s’il a coché la case « J’accepte les conditions générales de vente » le
+ lien « voir » mène vers « cgv.php ».<br>
+	Si l’internaute utilise un code promo, il faudra impérativement 
+vérifier si le code promo qui l’utilise est associé au produit qu’il 
+commande et si c’est le cas porter les répercussions sur le prix de ce 
+produit.<br>
+	L’idéal serait de recharger la page avant validation définitive du 
+panier et d’afficher la réduction réalisée en euros, le nouveau prix 
+ainsi que le % économisé entre le prix de base et le nouveau prix réduit
+ calculé.<br><br>
+
+	C’est seulement après avoir accepté les CGV et avoir payé qu’une 
+occurrence se crée dans les tables commandes et details_commandes.<br>
+	C’est également à ce moment-là que l’état du produit passe à 1 pour cet
+ id de produit dans la table produit. (0 correspond à « réservable »  
+donc « disponible », 1 correspond à « réserver » et par conséquent « 
+n’étant plus disponible »).<br>
+	Logiquement ce produit à présent payé ne doit plus apparaître dans les 
+produits « réservables » sur les pages suivantes : « index.php » - « 
+reservation.php » - « reservation_details.php » - « recherche.php »<br><br>
+
+	Après avoir payé, le membre connecté reçoit un email de confirmation 
+lui indiquant son numéro de commande et en pièce jointe le récapitulatif
+ du produit acheté sur une facture générée au format PDF (cette facture 
+devra également être consultable sur l’espace profil du membre).<br><br>
+
+	<h2 id="php20.10"><span class="petitnumero">20.10</span><span class="isocele"></span> <span class="contenu-h2">Exercice 7.2 :  Les pages web côté BACK</span></h2>
+	<h3>Exercice 7.201 :  Back - Gestion des salles  (gestion_salles.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php140.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+administrateur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+administrateur.<br><br>
+
+	<span class="numero-rouge">3</span>, Les deux liens pointent sur la même page : « gestion_salles.php » et déclenchent une action.<br><br>
+
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3.1</span>, dans cette zone nous avons un 
+premier lien, si l’administrateur clique sur « ajouter une salle » un 
+formulaire apparaît en dessous et il doit pouvoir entrer des 
+informations pour ajouter une salle (ces informations sont ensuite 
+sauvegardées dans la table salle).<br><br>
+
+	<span class="numero-rouge">3.2</span>, nous avons également un second 
+lien, si l’administrateur clique dessus « affichage des salles » il doit
+ pouvoir observer toutes les salles dont il dispose (il s’agit du 
+contenu de la table salle).<br><br>
+
+	Suite à cet affichage, il pourra modifier une salle existante si 
+l’administrateur le souhaite en cliquant sur un lien « modification », 
+lors de cette action, il doit retrouver toutes les valeurs actuelles de 
+la salle qu’il s’apprête à changer dans le formulaire de modification 
+affiché.<br>
+	Nous lui donnerons également la possibilité de supprimer une salle avec toutes les conséquences que cela implique.<br><br>
+	
+	<hr class="miniHR">
+	
+	<h3>Exercice 7.202 : Back - Gestion des produits  (gestion_produits.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php141.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+administrateur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+administrateur.<br><br>
+
+	<span class="numero-rouge">3</span>, Les deux liens pointent sur la même page : « gestion_produits.php » et déclenchent une action.<br><br>
+	
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	3, dans cette zone nous avons un premier lien, si l’administrateur 
+clique sur « ajouter un produit » un formulaire apparaît en dessous et 
+il doit pouvoir entrer des informations pour ajouter un produit (ces 
+informations sont ensuite sauvegardées dans la table produit).<br>
+	Voici un exemple du formulaire attendu :<br>
+	<img src="Eprojet%20%20%20Php_files/php142.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	La date de départ doit naturellement être supérieure à la date d’arrivée.<br>
+	La date d’arrivée doit être supérieure à la date du jour.<br><br>
+	
+	Suite à la validation de ce formulaire, il faudra donc lancer une 
+insertion dans la table produit afin que les deux (produits et salles) 
+soient bien reliés.<br>
+	Attention : une salle peut être associée à plusieurs produits à la fois. <br>
+	Exemple :<br>
+	<table cellpadding="5" border="1">
+		<tbody><tr>
+			<th>Salles</th>
+			<th>Produits</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>id_salle : 1</td>
+			<td>salle Cézanne – paris –	id_produit : 1<br>
+				Date_arrivee : 2015-11-22<br>
+				Date_arrivee : 2015-11-27<br>
+				Prix : 550 euros</td>
+			<td>L’id_salle 1 est relié avec l’id_produit 1. C'est-à-dire que la 
+salle Cézanne à Paris sera disponible du 22 au 27 novembre pour 550 
+euros</td>
+		</tr>
+		<tr>
+			<td>id_salle : 1</td>
+			<td>salle Cézanne – paris –	id_produit : 2<br>
+				Date_arrivee : 2015-11-29<br>
+				Date_arrivee : 2015-12-03<br>
+				Prix : 600 euros</td>
+			<td>L’id_salle 1 est relié avec l’id_produit 2. C'est-à-dire que 
+cette même salle Cézanne à Paris sera disponible la semaine suivante du 
+29 novembre au 03 décembre pour 600 euros.</td>
+		</tr>
+		<tr>
+			<td>id_salle : 2</td>
+			<td>salle Mozart – paris –	id_produit : 3<br>
+				Date_arrivee : 2015-11-29<br>
+				Date_arrivee : 2015-12-03<br>
+				Prix : 380 euros</td>
+			<td>L’id_salle 2 est relié avec l’id_produit 3. C'est-à-dire que la 
+salle Mozart à Paris sera disponible du 29 nov au 03 déc pour 380 euros</td>
+		</tr>
+	</tbody></table><br>
+	
+	Une salle est donc susceptible d’appartenir à plusieurs produits. En revanche chaque produit est unique.<br><br>
+
+	3, nous avons également un second lien, si l’administrateur clique 
+dessus « affichage des produits » il doit pouvoir observer tous les 
+produits dont il dispose (il s’agit du contenu de la table produit).<br><br>
+
+	De plus, il doit pouvoir cliquer sur les entêtes suivantes : « 
+date_arrivee » – « date_depart » ou encore l’entête « prix » afin 
+d’afficher les produits dans l’ordre croissant/décroissant des prix.<br>
+	L’administrateur doit aussi pouvoir modifier et supprimer ses produits.<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.203 : Back - Gestion des membres  (gestion_membres.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php143.jpg" alt="explication PHP" title="explication PHP"><br><br>
+			
+	<u>Description</u> :<br>
+	<span class="numero-rouge">3</span> correspond à l’affichage des membres du site.<br>
+	<span class="numero-rouge">4</span> correspond à l’affichage d’un nouveau formulaire d’inscription.<br><br>
+
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3</span>, nous avons l’affichage des membres (il s’agit du contenu de la table membres).<br>
+	Pour chaque membre, l’administrateur dispose d’un lien sous forme d’une
+ croix représentée par un « X » qui peut lui permettre de supprimer le 
+compte d’un membre.<br><br>
+
+	<span class="numero-rouge">4</span>, L’administrateur à la possibilité 
+de créer un nouveau compte « administrateur » à l’un de ses 
+collaborateurs. En cliquant sur ce lien, un formulaire d’inscription 
+apparaît afin qu’il puisse rentrer les informations qui permettront de 
+créer ce nouveau compte.<br><br>
+	<hr class="miniHR">
+	
+	<h3>Exercice 7.204 : Back - Gestion des commandes  (gestion_commandes.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php145.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	
+	<u>Description</u> :<br>
+	<span class="numero-rouge">3</span> correspond à l’affichage des commandes passées (et payées) sur notre site.<br>
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3</span>, nous avons l’affichage des commandes (il s’agit du contenu de la table commandes).<br>
+	Nous affichons à titre informatif le chiffre d’affaires (CA).<br><br>
+
+	Les données sous la colonne « id_commande » sont sous forme de lien 
+cliquable et permettent d’afficher le détail d’une commande (sur la même
+ page).<br>
+	Exemple :<br>
+	<img src="Eprojet%20%20%20Php_files/php147.jpg" alt="explication PHP" title="explication PHP"><br><br>
+
+	<hr class="miniHR">
+
+	<h3>Exercice 7.205 : Back - Gestion des avis  (gestion_avis.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php148.jpg" alt="explication PHP" title="explication PHP"><br><br>
+
+	<u>Description</u> :<br>
+	<span class="numero-rouge">3</span> correspond à l’affichage des avis laissés sur le site.<br><br>
+
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3</span>, nous avons l’affichage des avis laissés sur le site (il s’agit du contenu de la table avis).<br>
+	Pour chaque avis, l’administrateur dispose d’un lien sous forme d’une 
+croix représentée par un « X » qui peut lui permettre de supprimer 
+l’avis d’un membre s’il le juge incorrect.<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.206 : Back - Gestion des codes promo  (gestion_promos.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php149.jpg" alt="explication PHP" title="explication PHP"><br><br>
+
+	<u>Description</u> :<br>
+	2 correspond au menu quand un administrateur arrive (attention il est 
+évolutif suivant l’internaute : visiteur, membre, administrateur). 
+Ci-dessus nous sommes dans le cas administrateur.<br><br>
+
+	3, Les deux liens pointent sur la même page : « gestion_promos.php » et déclenchent une action.<br><br>
+	
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	3, dans cette zone nous avons un premier lien, si l’administrateur 
+clique sur « ajouter un code promo » un formulaire apparaît en dessous 
+et il doit pouvoir entrer des informations pour ajouter un code promo 
+(ces informations sont ensuite sauvegardées dans la table promotions).<br><br>
+
+	3, nous avons également un second lien, si l’administrateur clique 
+dessus « affichage des codes promo » il doit pouvoir observer tous les 
+codes promo dont il dispose (il s’agit du contenu de la table 
+promotions).<br><br>
+
+	L’administrateur doit également pouvoir supprimer des codes de 
+promotion (il faudra alors porter une attention particulière aux 
+produits qui y sont éventuellement associés).<br><br>
+
+	L’administrateur enverra les codes de promotion qu’il souhaite diffuser lors de l’envoi de la newsletter.<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.207 : Back - Statistiques  (statistiques.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php150.jpg" alt="explication PHP" title="explication PHP"><br><br>
+	<u>Description</u> :<br>
+	<span class="numero-rouge">2</span> correspond au menu quand un 
+administrateur arrive (attention il est évolutif suivant l’internaute : 
+visiteur, membre, administrateur). Ci-dessus nous sommes dans le cas 
+administrateur.<br><br>
+
+	<span class="numero-rouge">3</span>, Les trois liens pointent sur la même page : « statistiques.php » et déclenchent une action.<br><br>
+
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3</span>, dans cette zone nous avons trois 
+liens permettant à l’administrateur d’avoir des statistiques selon les 
+différentes informations qu’il demande.<br>
+	L’affichage des résultats doit se faire sur la même page.<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.208 : Back - Envoyer la newsletter (envoi_newsletter.php)</h3>
+	<img src="Eprojet%20%20%20Php_files/php151.jpg" alt="explication PHP" title="explication PHP"><br><br>
+
+	<u>Description</u> :<br>
+	<span class="numero-rouge">3</span> correspond à l’affichage du formulaire d’envoi d’email<br>
+	<u>Recommandations</u> :<br>
+	Cette page n’est disponible que si l’on est administrateur (vous devez penser à verrouiller l’accès dans tous les autres cas).<br><br>
+
+	<span class="numero-rouge">3</span>, Nous pouvons choisir un message et
+ ce message doit s’envoyer à l’ensemble des membres « abonné » à la 
+newsletter (autrement dit, il faut faire une correspondance entre la 
+table newsletter, et la table membres).<br><br>
+	<hr class="miniHR">
+
+	<h3>Exercice 7.209 : Back - La base de données</h3>
+	Voici notre modélisation :<br><br>
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>salle</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_salle (int 5) PK - AI<br>
+			- pays (varchar 20)<br>
+			- ville (varchar 20)<br>
+			- adresse (varchar 50)<br>
+			- cp (varchar 5)<br>
+			- titre (varchar 200)<br>
+			- description (text)<br>
+			- photo (varchar 200)<br>
+			- capacite (int 3)<br>
+			- categorie (enum)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>produit</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_produit (int 5) PK - AI<br>
+			- date_arrivee (datetime)<br>
+			- date_depart (datetime)<br>
+			- id_salle (int 5) <br>
+			- id_promo (int 2)<br>
+			- prix(int 5)<br>
+			- etat (int 1) <br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>promotion</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_promo (int 2) PK - AI<br>
+			- code_promo (varchar 6)<br>
+			- reduction (int 5)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>membre</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_membre (int 5) PK - AI<br>
+			- pseudo (varchar 15)<br>
+			- mdp (varchar 60)<br>
+			- nom (varchar 20)<br>
+			- prenom (varchar 20)<br>
+			- email (varchar 30)<br>
+			- sexe (enum : m,f)<br>
+			- ville (varchar 20)<br>
+			- cp (int 5)<br>
+			- adresse (varchar 30)<br>
+			- statut (int 1)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>avis</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_avis (int 5) PK - AI<br>
+			- id_membre (int 5)<br>
+			- id_salle (int 5)<br>
+			- commentaire (text)<br>
+			- note (int 2)<br>
+			- date (datetime)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>commande</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_commande (int 6) PK - AI<br>
+			- montant (int 5) <br>
+			- id_membre (int 5)<br>
+			- date (datetime)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>details_commande</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_details_commande (int 6) PK - AI<br>
+			- id_commande (int 6)<br>
+			- id_produit (int 5)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	
+	<table style="float: left; margin-right: 5%;" cellpadding="10" border="1">
+		<tbody><tr>
+			<th>newsletter</th>
+		</tr>
+		<tr>
+			<td style="text-align: left;">
+			- id_newsletter (int 5) PK - AI<br>
+			- id_membre (int 5)<br>
+			</td>
+		</tr>
+	</tbody></table>
+	<div class="clear"></div>			</div>
+									<div class="colonne-droite">
+				<div class="contenu-colonne-droite">
+					<p class="colonne-titre1">PHP</p>
+					<a href="https://www.eprojet.fr/cours/php/01-php-intro-php" title=" Intro Php">1.  Intro Php</a>
+<a href="https://www.eprojet.fr/cours/php/02-php-instruction-d--affichage" title=" Instruction D'affichage">2.  Instruction D'affichage</a>
+<a href="https://www.eprojet.fr/cours/php/03-php-les-variables-et-constantes" title=" Les Variables Et Constantes">3.  Les Variables Et Constantes</a>
+<a href="https://www.eprojet.fr/cours/php/04-php-syntaxe-et-concatenation" title=" Syntaxe Et Concatenation">4.  Syntaxe Et Concatenation</a>
+<a href="https://www.eprojet.fr/cours/php/05-php-conditions-et-operateurs" title=" Conditions Et Operateurs">5.  Conditions Et Operateurs</a>
+<a href="https://www.eprojet.fr/cours/php/06-php-fonctions-predefinies" title=" Fonctions Predefinies">6.  Fonctions Predefinies</a>
+<a href="https://www.eprojet.fr/cours/php/07-php-fonction-utilisateur" title=" Fonction Utilisateur">7.  Fonction Utilisateur</a>
+<a href="https://www.eprojet.fr/cours/php/08-php-les-boucles" title=" Les Boucles">8.  Les Boucles</a>
+<a href="https://www.eprojet.fr/cours/php/09-php-inclusion-de-fichiers" title=" Inclusion De Fichiers">9.  Inclusion De Fichiers</a>
+<a href="https://www.eprojet.fr/cours/php/10-php-tableaux-array" title=" Tableaux Array">10.  Tableaux Array</a>
+<a href="https://www.eprojet.fr/cours/php/11-php-classes-et-objets" title=" Classes Et Objets">11.  Classes Et Objets</a>
+<a href="https://www.eprojet.fr/cours/php/12-php-les-superglobales" title=" Les Superglobales">12.  Les Superglobales</a>
+<a href="https://www.eprojet.fr/cours/php/13-php-lien-get-et-formulaire-post" title=" Lien Get Et Formulaire Post">13.  Lien Get Et Formulaire Post</a>
+<a href="https://www.eprojet.fr/cours/php/14-php-les-cookies" title=" Les Cookies">14.  Les Cookies</a>
+<a href="https://www.eprojet.fr/cours/php/15-php-les-sessions" title=" Les Sessions">15.  Les Sessions</a>
+<a href="https://www.eprojet.fr/cours/php/16-php-requete-sql-avec-pdo-et-mysqli" title=" Requete Sql Avec Pdo Et Mysqli">16.  Requete Sql Avec Pdo Et Mysqli</a>
+<a href="https://www.eprojet.fr/cours/php/17-php-projet-espace-de-dialogue" title=" Projet Espace De Dialogue">17.  Projet Espace De Dialogue</a>
+<a href="https://www.eprojet.fr/cours/php/18-php-approche-de-la-securite" title=" Approche De La Securite">18.  Approche De La Securite</a>
+<a href="https://www.eprojet.fr/cours/php/19-php-realisation-d--un-site-web-complet" title=" Realisation D'un Site Web Complet">19.  Realisation D'un Site Web Complet</a>
+<a href="https://www.eprojet.fr/cours/php/20-php-evaluation" title=" Evaluation" class="active">20.  Evaluation</a>
+					<div class="partage">
+						<ul>
+															<li><a rel="nofollow" title="Voir au format PDF" target="blank" href="https://www.eprojet.fr/cours/pdf/php-support.pdf"><img src="Eprojet%20%20%20Php_files/pdf.png"></a></li>
+														<li><a rel="nofollow" class="facebook" title="Partager sur Facebook" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.eprojet.fr%2FF', 'Facebook');" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.eprojet.fr%2F"><img src="Eprojet%20%20%20Php_files/facebook.png"></a></li>
+							<li><a rel="nofollow" class="twitter" title="Partager sur Twitter" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.eprojet.fr%2F&amp;text=Formez+vous+a+votre+rythme+sur+eprojet.fr+!&amp;hashtags=', 'Twitter');" href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.eprojet.fr%2F&amp;text=Formez+vous+a+votre+rythme+sur+eprojet.fr+!&amp;hashtags="><img src="Eprojet%20%20%20Php_files/twitter.png"></a></li><li><a rel="nofollow" title="Partager sur Google+" onclick="window.open(this.href, 'partage', 'height=400, width=500, top=300, left=300, toolbar=no, menubar=yes, location=no, resizable=yes, scrollbars=no, status=no'); return false; __gaTracker('send', 'event', 'outbound-article', 'https://plus.google.com/share?url=http%3A%2F%2Fwww.eprojet.fr%2F', 'Google+');" href="https://plus.google.com/share?url=http%3A%2F%2Fwww.eprojet.fr%2F"><img src="Eprojet%20%20%20Php_files/google.png"></a></li>
+							<li><a title="Partager à un ami par email" href="https://www.eprojet.fr/cours/partage.php?contenu=/cours/php/20-php-evaluation"><img src="Eprojet%20%20%20Php_files/email.png"></a></li>
+							<li><a title="Déposez un commentaire" href="https://www.eprojet.fr/cours/commentaire.php"><img src="Eprojet%20%20%20Php_files/commentaire.png"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+						<div class="clear"></div>
+		</div>
+	</section>
+			<footer>
+				<div class="conteneur">
+						2020 - <a href="https://www.eprojet.fr/" title="eProjet.fr">eProjet.fr</a> - 
+						<a href="https://www.eprojet.fr/cours/mentions-legales.php" title="Mentions Légales">Mentions Légales</a> -
+						<a href="https://www.eprojet.fr/cours/commentaire.php" title="Mentions Légales">Commentaire</a> -
+						<a href="https://www.eprojet.fr/cours/qui-sommes-nous.php" title="Qui sommes nous">Qui sommes nous ?</a> -
+						<a href="https://www.eprojet.fr/cours/contact.php" title="contact">Contact</a> -
+						<a href="https://plus.google.com/+EvogueFr/" target="blank">G+</a><br>
+						© Copyright. Aucune reproduction, même partielle (textes, 
+documents, images, etc.), ne peut être faite sans l'accord de son 
+auteur.
+				</div>
+			</footer>
+			<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-75707004-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	
+</body></html>
