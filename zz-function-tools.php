@@ -6,7 +6,7 @@ function d_bug($nom){
     echo '</pre>';
 }
 
-function d_dump($ddump) {
+function dump($ddump) {
     echo '<pre>';
     var_dump($ddump);
     echo '</pre>';
