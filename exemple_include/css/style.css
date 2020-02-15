@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+
+.conteneur {
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid #333;
+}
+header {
+	height: 140px;
+	color: white;
+	background-color: #333;
+}
+nav {
+	height: 30px;
+	background-color: darkslategray;
+}
+nav a {
+	color: white;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	width: 15%;
+	text-align: center;
+}
+section {
+	height: 500px;
+	color: black;
+	padding: 20px;
+}
+footer {
+	text-align: center;
+	padding-top: 20px;
+	height: 100px;
+	background-color: #333;
+	color: white;
+}
+h1 {
+	margin: 0;
+	padding: 20px;
+}
